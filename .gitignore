@@ -9,6 +9,8 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+.vercel
+
 
 # testing
 /coverage
@@ -39,3 +41,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+<<<<<<< HEAD
+=======
+
+.vercel
+>>>>>>> 35b17eb9d8176d90d913a2c987ab42cadd0c0569
