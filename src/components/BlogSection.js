@@ -5,6 +5,7 @@ import blog3 from '../../public/blog3.jpg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
 
 export default function BlogSection() {
      const blogs = [
@@ -43,6 +44,7 @@ export default function BlogSection() {
           speed: 500,
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
           responsive: [
                {
                     breakpoint: 639,
@@ -56,16 +58,28 @@ export default function BlogSection() {
      };
 
      return (
-          <section className="py-12 relative w-full px-6 sm:px-12 md:px-16 lg:px-24 mx-auto">
-               <h1 className="text-[#005944] text-2xl sm:text-4xl md:text-5xl font-bold mb-8">
+          <motion.section
+               initial={{ opacity: 0, y: 50 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true, amount: 0.3 }}
+               transition={{ duration: 0.8, ease: "easeOut" }} className="py-12 relative w-full px-6 sm:px-12 md:px-16 lg:px-24 mx-auto">
+               <motion.h2
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="text-[#005944] text-2xl sm:text-4xl md:text-5xl font-bold mb-8">
                     A Humane World Blog
-               </h1>
+               </motion.h2>
 
                <div className="relative block sm:hidden">
                     <Slider {...sliderSettings}>
-                         {blogs.map((blog) => (
-                              <div
+                         {blogs.map((blog, index) => (
+                              <motion.div
                                    key={blog.id}
+                                   initial={{ opacity: 0, y: 50 }}
+                                   whileInView={{ opacity: 1, y: 0 }}
+                                   viewport={{ once: true, amount: 0.3 }}
+                                   transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
                                    className="bg-[#FAFAFA] rounded-xl overflow-hidden"
                               >
                                    <div className="overflow-hidden rounded-2xl relative group">
@@ -84,16 +98,20 @@ export default function BlogSection() {
                                         <p className="text-[#1A5CC7] md:text-lg mt-1">{blog.description}</p>
                                         <p className="text-[#616060] mt-2 text-sm sm:text-base">{blog.content}</p>
                                    </div>
-                              </div>
+                              </motion.div>
                          ))}
                     </Slider>
                </div>
 
                {/* Desktop Grid */}
                <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {blogs.map((blog) => (
-                         <div
+                    {blogs.map((blog, index) => (
+                         <motion.div
                               key={blog.id}
+                              initial={{ opacity: 0, y: 50 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              viewport={{ once: true, amount: 0.3 }}
+                              transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
                               className="bg-[#FAFAFA] rounded-xl overflow-hidden"
                          >
                               <div className="overflow-hidden rounded-2xl relative group">
@@ -112,15 +130,19 @@ export default function BlogSection() {
                                    <p className="text-[#1A5CC7] text-lg mt-1">{blog.description}</p>
                                    <p className="text-[#616060] mt-2 text-sm sm:text-base">{blog.content}</p>
                               </div>
-                         </div>
+                         </motion.div>
                     ))}
                </div>
 
-               <div className="flex justify-center text-center mt-12">
+               <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }} className="flex justify-center text-center mt-12">
                     <button className="bg-[#005944] hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg flex items-center justify-center gap-2">
                          Read the blog →
                     </button>
-               </div>
-          </section>
+               </motion.div>
+          </motion.section>
      );
 };
