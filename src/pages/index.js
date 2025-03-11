@@ -10,6 +10,7 @@ import BlogSection from "@/components/BlogSection";
 import VideoSection from "@/components/VideoSection";
 import NewsletterSection from "@/components/NewsletterSection";
 
+
 export default function Home() {
   return (
     <>
