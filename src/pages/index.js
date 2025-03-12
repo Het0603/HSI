@@ -29,6 +29,7 @@ export default function Home() {
         alignment="md:flex-row-reverse"
         textColor="text-black"
         headingColor="text-[#005944]"
+        buttonBgColor="#005944"
       />
       <MissionSection
         title="Bold work, global mission"
@@ -43,11 +44,11 @@ export default function Home() {
         headingColor="text-[#5EC9FF]"
       />
       <Carousel />
-      <CampaignSection />
       <DonationSection />
-      <BlogSection />
-      <VideoSection />
       <OurImpact />
+      <CampaignSection />
+      <VideoSection />
+      <BlogSection />
       <NewsletterSection />
       <Footer />
     </>
