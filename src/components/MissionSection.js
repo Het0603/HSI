@@ -2,8 +2,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
-export default function missionSection({ title, subtitle, description, buttonText, imageSrc, bgColor, alignment, textColor, headingColor }) {
+export default function missionSection({ title, subtitle, description, buttonText, imageSrc, bgColor, alignment, textColor, headingColor, buttonBgColor }) {
   const router = useRouter();
+  const defaultButtonBgColor = "#009CEB";
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -25,7 +26,8 @@ export default function missionSection({ title, subtitle, description, buttonTex
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.4, delay: 0.4 }} onClick={() => router.push('/')} className="mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl">
+            transition={{ duration: 0.4, delay: 0.4 }} onClick={() => router.push('/')} className={`mt-6 px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl`}
+            style={{ backgroundColor: buttonBgColor || defaultButtonBgColor}}>
             {buttonText}
           </motion.button>
         </motion.div>

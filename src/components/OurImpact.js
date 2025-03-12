@@ -1,53 +1,47 @@
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const formatNumber = (num) => {
-  if (num >= 1000) {
-    return `${Math.floor(num / 1000)}k+`;
-  }
-  return `${num}+`;
+  return num >= 1000 ? `${Math.floor(num / 1000)}k+` : `${num}+`;
 };
 
 const CounterBox = ({ title, target }) => {
-  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, amount: 0.5 });
+
+  // Motion value and spring effect for smooth counting
+  const count = useMotionValue(0);
+  const smoothCount = useSpring(count, { stiffness: 50, damping: 20 });
+  const displayValue = useTransform(smoothCount, (value) => `${Math.floor(value)}`); // Ensure whole numbers
 
   useEffect(() => {
-    let start = 0;
-    const end = target;
-    const duration = 2000;
-    const increment = end / (duration / 50);
-
-    const counter = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(counter);
-      } else {
-        setCount(Math.ceil(start));
-      }
-    }, 50);
-
-    return () => clearInterval(counter);
-  }, [target]);
+    if (inView) {
+      count.set(target); // Start counting when in view
+    }
+  }, [inView, target, count]);
 
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-[#FAFAFA] p-6 rounded-lg shadow-lg text-center w-full sm:w-64 flex flex-col items-center">
-      <h2 className="text-3xl lg:text-5xl font-bold mb-2">{formatNumber(count)}</h2>
-      <p className="text-lg font-medium text-[#005944] mt-auto overflow-hidden text-ellipsis whitespace-nowrap max-w-full">{title}</p>
+      className="bg-[#FAFAFA] p-6 rounded-lg shadow-lg text-center w-full sm:w-64 flex flex-col items-center"
+    >
+      <h2 className="text-3xl lg:text-5xl font-bold mb-2">
+        <motion.span>{displayValue}</motion.span>
+      </h2>
+      <p className="text-lg font-medium text-[#005944] mt-auto">{title}</p>
     </motion.div>
   );
 };
 
 export default function OurImpact() {
   const stats = [
-    { title: "Animals Vaccinated", target: 30000 },
-    { title: "Animals Sterilized", target: 15000 },
-    { title: "Field Campaigns", target: 500 },
+    { title: "Animals Vaccinated", target: 50000 },
+    { title: "Animals Sterilized", target: 30000 },
+    { title: "Field Campaigns", target: 800 },
     { title: "Active Partner Organizations", target: 10 },
   ];
 
@@ -57,7 +51,7 @@ export default function OurImpact() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="py-12 relative w-full px-6 sm:px-12 md:px-16 lg:px-24 mx-auto"
+      className="py-12 relative w-full px-6 sm:px-12 md:px-16 lg:px-24 mx-auto "
     >
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
