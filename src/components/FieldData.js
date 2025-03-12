@@ -1,31 +1,45 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
-import fieldDataImg from "../../public/fieldData.png";
 
-export default function fieldData() {
+export default function fieldData({ imageSrc, title, description }) {
      return (
-          <section className="bg-[#F4F4F4] text-white py-24 px-6 md:px-16 lg:px-24">
+          <motion.section
+               initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+               transition={{ duration: 1, ease: "easeOut" }}
+               className="bg-[#F4F4F4] text-white py-24 px-6 md:px-16 lg:px-24"
+          >
                <div className="flex flex-col-reverse md:flex-row items-center gap-8">
-                    <div className="md:w-1/2">
+                    <motion.div
+                         className="md:w-1/2"
+                         initial={{ opacity: 0, scale: 0.8 }}
+                         whileInView={{ opacity: 1, scale: 1 }}
+                         transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
                          <div className="overflow-hidden rounded-4xl relative group">
                               <div className="transition-all duration-300 transform group-hover:scale-105 ease-in-out">
                                    <Image
-                                        src={fieldDataImg}
+                                        src={imageSrc}
                                         alt="Field Data"
                                         className="rounded-4xl w-full h-[24rem]"
                                    />
                               </div>
                          </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="md:w-1/2 md:text-left p-4">
+                    <motion.div
+                         className="md:w-1/2 md:text-left p-4"
+                         initial={{ opacity: 0, x: -50 }}
+                         whileInView={{ opacity: 1, x: 0 }}
+                         transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
                          <h2 className="text-xl sm:text-3xl md:text-4xl text-[#005944] font-bold mt-2 max-w-[25rem]">
-                              Field Data Gathering with Offline Sync
+                              {title}
                          </h2>
-                         <p className="mt-4 sm:text-xl md:text-2xl text-black max-w-[29rem]">
-                              Record animal’s picture, GPS location, and other information about each animal vaccinated. Offline/Sync feature enables smooth handling of connectivity issues.
+                         <p className="mt-4 sm:text-xl md:text-2xl text-black max-w-[29rem]" dangerouslySetInnerHTML={{ __html: description }}>
                          </p>
-                    </div>
+                    </motion.div>
                </div>
-          </section>
+          </motion.section>
      );
 };

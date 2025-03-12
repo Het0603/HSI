@@ -1,26 +1,40 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
-import geofencing from "../../public/geofencing.jpg";
 
-export default function Geofencing() {
+export default function Geofencing({ imageSrc, title, description }) {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center justify-between py-24 bg-gray-100 gap-8 px-6 md:px-16 lg:px-24">
-      <div className="md:w-1/2">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="flex flex-col-reverse md:flex-row items-center justify-between py-16 bg-gray-100 gap-8 px-6 md:px-16 lg:px-24"
+    >
+      <motion.div
+        className="md:w-1/2"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         <div className="overflow-hidden rounded-4xl relative group">
           <div className="transition-all duration-300 transform group-hover:scale-105 ease-in-out">
             <Image
-              src={geofencing}
+              src={imageSrc}
               alt="Map with Geofencing"
-              className="rounded-4xl w-full h-[24rem]"
+              className="rounded-4xl w-full h-[24rem] object-contain"
             />
           </div>
         </div>
-      </div>
-      <div className="md:w-1/2 p-4">
-        <h1 className="text-2xl md:text-4xl lg:text-7xl font-semibold text-[#005944]">Geofencing</h1>
-        <p className="mt-4 sm:text-xl md:text-2xl max-w-[29rem]">
-          Divide and conquer large vaccination efforts by splitting teams into smaller areas. Setting up a geo-fence (virtual boundary) for each team will ensure no overlap in vaccination efforts. The app will keep users in their assigned area and warn them if they go outside the geo-fence.
-        </p>
-      </div>
-    </section>
+      </motion.div>
+      <motion.div
+        className="md:w-1/2 p-4"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold text-[#005944]">{title}</h2>
+        <p className="mt-4 sm:text-lg md:text-xl" dangerouslySetInnerHTML={{ __html: description }}></p>
+      </motion.div>
+    </motion.section>
   );
 };
