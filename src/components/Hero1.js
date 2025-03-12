@@ -22,7 +22,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold max-w-[45rem]"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold max-w-[50rem]"
           >
             Empowering Animal Welfare Through Technology
           </motion.h2>

@@ -23,6 +23,7 @@ const applications = [
     - Project sharing with Viewers or Editors for team management<br>
     - Accompanying mobile (Android) application for field work/data collection: GPS tracking, barcode scanning and image capture with off-line mode to handle poor/intermittent connectivity.`,
           imgSrc: slider1,
+          link: "/",
      },
      {
           title: "Mass Vaccination",
@@ -37,6 +38,7 @@ const applications = [
     - Project reports<br>
     - Data viewing with CSV export`,
           imgSrc: slider2,
+          link: "/mass-vaccination",
      },
      {
           title: "Population Management",
@@ -50,6 +52,7 @@ const applications = [
     - Workflow optimized starting from capture, through the clinic process from initial check, to sterilization, to post op evaluation to release.<br>
     - Geofenced areas to separate teams into distinct work areas for maximized efficiency`,
           imgSrc: slider3,
+          link: "/population-management",
      },
      {
           title: "Mobile App",
@@ -62,6 +65,7 @@ const applications = [
     - Heath record database for sterilization clinic management<br>
     - Release Lock feature (PM Only) - animals are geotagged on capture and field teams are required to release sterilized animals within 50M of capture.`,
           imgSrc: slider4,
+          link: "/",
      },
 ];
 
@@ -167,7 +171,7 @@ export default function Carousel() {
                                              <button onClick={() => router.push('/login')} className="bg-[#009CEB] text-white px-4 py-2 rounded w-full sm:w-40">
                                                   Login
                                              </button>
-                                             <button onClick={() => setSelectedApp(app)} className="bg-transparent border border-[#009CEB] w-full sm:w-40 text-[#009CEB] px-4 py-2 rounded">
+                                             <button onClick={() => router.push(app.link)} className="bg-transparent border border-[#009CEB] w-full sm:w-40 text-[#009CEB] px-4 py-2 rounded">
                                                   Know More
                                              </button>
                                         </div>
