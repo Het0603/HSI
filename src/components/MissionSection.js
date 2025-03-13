@@ -2,7 +2,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
-export default function missionSection({ title, subtitle, description, buttonText, imageSrc, bgColor, alignment, textColor, headingColor, buttonBgColor }) {
+export default function missionSection({ title, subtitle, description, buttonText, imageSrc, bgColor, alignment, textColor, headingColor, buttonBgColor, imageMargin }) {
   const router = useRouter();
   const defaultButtonBgColor = "#009CEB";
   return (
@@ -33,12 +33,12 @@ export default function missionSection({ title, subtitle, description, buttonTex
         </motion.div>
 
         <div className="md:w-1/2">
-          <div className="overflow-hidden relative group" style={{ clipPath: "ellipse(60% 70% at 50% 50%)" }}>
-            <div className="transition-all duration-300 transform group-hover:scale-105 ease-in-out">
+          <div className="overflow-hidden relative group">
+            <div>
               <Image
                 src={imageSrc}
                 alt="Mission Image"
-                className="object-cover"
+                className={`object-cover ${imageMargin}`}
               />
             </div>
           </div>
