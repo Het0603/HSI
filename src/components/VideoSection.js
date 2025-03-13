@@ -8,7 +8,7 @@ export default function VideoSection() {
                initial={{ opacity: 0, y: 50 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true, amount: 0.3 }}
-               transition={{ duration: 0.8, ease: "easeOut" }} className="bg-white h-[30rem] sm:h-[33rem] md:h-[45rem] lg:h-[50rem]"
+               transition={{ duration: 0.8, ease: "easeOut" }} className="bg-[#f8f8f8] h-[30rem] sm:h-[33rem] md:h-[45rem] lg:h-[50rem]"
           >
                <div className="relative py-12 px-6 sm:px-12 md:px-16 lg:px-24 h-110 md:h-160 object-cover bg-cover bg-center" style={{ backgroundImage: `url(${videoSection.src})` }}>
                     <div className="absolute inset-0 bg-[#009CEB] opacity-70"></div>

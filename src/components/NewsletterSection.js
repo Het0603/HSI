@@ -86,7 +86,7 @@ export default function NewsletterSection() {
                          initial={{ opacity: 0, x: 20 }}
                          whileInView={{ opacity: 1, x: 0 }}
                          viewport={{ once: true, amount: 0.3 }}
-                         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="w-full md:w-1/2 bg-white rounded-3xl shadow-lg p-6 md:p-8">
+                         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="w-full md:w-1/2 bg-[#f8f8f8] rounded-3xl shadow-lg p-6 md:p-8">
                          <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#005944]">Keep me up to date!</h3>
                          <p className="text-[#474747] mt-2 sm:text-lg md:text-xl max-w-full md:max-w-[25rem]">Get the latest news and quick, simple actions you can take to help animals each week</p>
 

@@ -10,7 +10,7 @@ export default function missionSection({ title, subtitle, description, buttonTex
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, ease: "easeOut" }} className={`${bgColor} text-white py-10 px-4 sm:px-12 md:px-16 lg:px-24 mt-6`}>
+      transition={{ duration: 0.6, ease: "easeOut" }} className={`${bgColor} text-white py-16 px-4 sm:px-12 md:px-16 lg:px-24`}>
       <div className={`flex flex-col ${alignment} items-center md:items-start gap-8 items-center`}>
         <motion.div
           initial={{ opacity: 0, x: -50 }}

@@ -106,13 +106,13 @@ export default function Carousel() {
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true, amount: 0.3 }}
                transition={{ duration: 0.8, ease: "easeOut" }}
-               className="relative w-full px-4 py-10 sm:px-12 md:px-16 lg:px-24 mx-auto"
+               className="relative w-full px-4 sm:px-12 md:px-16 lg:px-24 mx-auto bg-[#f8f8f8]"
           >
                <motion.h2
                     variants={textVariants}
                     initial="hidden"
                     animate="visible"
-                    className="text-[#005944] text-2xl sm:text-4xl md:text-5xl font-bold p-4"
+                    className="text-[#005944] text-2xl sm:text-4xl md:text-5xl font-bold p-4 mb-2"
                >
                     Applications
                </motion.h2>
@@ -168,7 +168,7 @@ export default function Carousel() {
                                              )}
                                         </motion.p>
                                         <div className="mt-4 flex gap-3 justify-between">
-                                             <button onClick={() => router.push('/login')} className="bg-[#009CEB] text-white px-4 py-2 rounded-lg w-full sm:w-40">
+                                             <button onClick={() => router.push('https://web.hsapps.org/login')} className="bg-[#009CEB] text-white px-4 py-2 rounded w-full sm:w-40">
                                                   Login
                                              </button>
                                              <button onClick={() => router.push(app.link)} className="bg-transparent border border-[#009CEB] w-full sm:w-40 text-[#009CEB] px-4 py-2 rounded-lg">

@@ -13,7 +13,7 @@ export default function Footer() {
     <motion.footer
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }} className="bg-white border-gray-200">
+      transition={{ duration: 1 }} className="bg-[#f8f8f8] border-gray-200">
       <div className="md:px-16 lg:px-24 mx-auto py-4 md:py-6 lg:py-12 px-6 flex flex-col md:flex-row md:justify-between md:items-center space-y-6 md:space-y-0">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -30,11 +30,7 @@ export default function Footer() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }} >
-            <Image src={snap} alt="Snapchat" />
             <Image src={instagram} alt="Instagram" />
-            <Image src={xIcon} alt="X" />
-            <Image src={facebook} alt="Facebook" />
-            <Image src={linkdin} alt="Linkdin" />
             <Image src={youtube} alt="Youtube" />
           </motion.div>
         </motion.div>
@@ -44,9 +40,6 @@ export default function Footer() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.5 }} className="flex flex-col text-center text-left space-y-6">
           <a href="/" className="hover:text-[#009CEB] transition sm:text-lg md:text-xl">About us</a>
-          <a href="#" className="hover:text-[#009CEB] transition sm:text-lg md:text-xl">Diversity & Inclusion</a>
-          <a href="#" className="hover:text-[#009CEB] transition sm:text-lg md:text-xl">Governance</a>
-          <a href="#" className="hover:text-[#009CEB] transition sm:text-lg md:text-xl">Financials</a>
           <a href="#" className="hover:text-[#009CEB] transition sm:text-lg md:text-xl">Privacy and Cookie Policy</a>
         </motion.div>
 
@@ -66,7 +59,7 @@ export default function Footer() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }} className="text-center py-4 border-t border-gray-200 text-gray-600 sm:text-lg md:text-xl">
         <p>
-          © Copyright {new Date().getFullYear()} <a href="#" className="text-[#009CEB] font-semibold">Humane Society International</a>
+          © Copyright {new Date().getFullYear()} <a href="#" className="text-[#009CEB] font-semibold">Humane World for Animals</a>
         </p>
       </motion.div>
     </motion.footer>

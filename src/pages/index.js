@@ -9,7 +9,6 @@ import DonationSection from "@/components/DonationSection";
 import BlogSection from "@/components/BlogSection";
 import VideoSection from "@/components/VideoSection";
 import NewsletterSection from "@/components/NewsletterSection";
-import OurImpact from "@/components/OurImpact";
 import mission from "../../public/mission.jpg";
 import hero2 from "../../public/hero2.jpg";
 
@@ -18,6 +17,9 @@ export default function Home() {
     <>
       <Header />
       <Hero1 />
+      <Carousel />
+      <CampaignSection />
+      <DonationSection />
       <MissionSection
         title="Humane World for Animals"
         subtitle="Who We Are"
@@ -25,7 +27,7 @@ export default function Home() {
         Our mission is to confront and eliminate cruelty to animals worldwide, addressing issues ranging from factory farming and the fur trade to wildlife conservation and companion animal protection.`}
         buttonText="Find out"
         imageSrc={hero2}
-        bgColor="bg-white"
+        bgColor="bg-[#f8f8f8]"
         alignment="md:flex-row-reverse"
         textColor="text-black"
         headingColor="text-[#005944]"
@@ -43,10 +45,6 @@ export default function Home() {
         textColor="text-white"
         headingColor="text-[#5EC9FF]"
       />
-      <Carousel />
-      <DonationSection />
-      <OurImpact />
-      <CampaignSection />
       <VideoSection />
       <BlogSection />
       <NewsletterSection />
