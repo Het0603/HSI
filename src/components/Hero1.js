@@ -17,14 +17,14 @@ export default function Hero() {
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="absolute inset-0 bg-opacity-50 top-[20%] px-6 sm:px-10 md:px-16 lg:px-24 text-white">
+        <div className="absolute inset-0 bg-opacity-50 top-[10%] px-6 sm:px-10 md:px-16 lg:px-24 text-white">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold max-w-[50rem]"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold max-w-[50rem]"
           >
-            Empowering Animal Welfare Through Technology
+            <span>Humane World App</span>
           </motion.h2>
 
           <motion.p
@@ -33,6 +33,9 @@ export default function Hero() {
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
             className="mt-4 text-lg sm:text-xl md:text-2xl max-w-[38rem]"
           >
+            <span className="lg:text-4xl">Empowering Animal Welfare Through Technology Driven Innovation</span>
+            <br />
+            <br />
             From field to clinic, our digital ecosystem drives impactful change in the lives of animals — one vaccination, one rescue, one treatment at a time.
           </motion.p>
 

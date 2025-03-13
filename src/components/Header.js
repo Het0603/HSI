@@ -3,6 +3,7 @@ import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import { useState } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.svg";
+import logo2 from "../../public/DALL·E 2025-03-12 21.27.56 - A modern and minimalistic grayscale mobile app logo representing an NGO for animal welfare and technology-Photoroom.jpg";
 import { useRouter } from "next/router";
 
 export default function Header() {
@@ -20,6 +21,11 @@ export default function Header() {
         <nav className="mx-auto px-6 md:px-16 sm:px-24 flex justify-between items-center py-4 lg:py-0 bg-white shadow-md">
           <Link href="/" className="flex items-center">
             <Image src={logo} width={160} height={60} alt="Logo" className="w-28 h-auto md:w-38 lg:w-42" />
+          </Link>
+          <div className="w-[2px] h-8 md:h-14 bg-gray-700 mx-2"></div>
+          <Link href="/" className="flex items-center">
+            <Image src={logo2} width={50} height={30} alt="Logo" className="w-10 h-auto md:w-38 lg:w-8" />
+            <span className="ml-2 text-xs md:text-xs lg:text-xs font-bold text-gray-900 w-[10rem]">Humane World Apps</span>
           </Link>
 
           <ul className="hidden lg:flex items-center space-x-6 text-gray-700 md:w-[100rem] md:justify-end pr-5">
