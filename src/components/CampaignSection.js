@@ -11,12 +11,12 @@ import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 
 const campaignAreas = [
-  { id: 1, image: campaign1, location: "Vadadora, India" },
-  { id: 2, image: campaign2, location: "Dharwad, India" },
-  { id: 3, image: campaign3, location: "Cebu City, Philippines" },
-  { id: 4, image: campaign4, location: "Dharwad, India" },
-  { id: 5, image: campaign5, location: "Vadadora, India" },
-  { id: 6, image: campaign6, location: "Jaipur, India" },
+  { id: 1, image: campaign1, location: "Bolivia" },
+  { id: 2, image: campaign2, location: "Chile" },
+  { id: 3, image: campaign3, location: "South Africa" },
+  { id: 4, image: campaign4, location: "India" },
+  { id: 5, image: campaign5, location: "Philippines" },
+  { id: 6, image: campaign6, location: "Vietnam" },
 ];
 
 export default function CampaignSection() {
@@ -48,13 +48,13 @@ export default function CampaignSection() {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6, ease: "easeOut" }} className="relative w-full px-4 sm:px-12 md:px-16 lg:px-24 mx-auto py-12">
+      transition={{ duration: 0.6, ease: "easeOut" }} className="relative w-full px-4 sm:px-12 md:px-16 lg:px-24 mx-auto py-12 bg-[#f8f8f8]">
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }} className="text-[#005944] text-2xl sm:text-4xl md:text-5xl font-bold mb-8">
-        Recent Campaign Areas
+        Programs Using Humane World App
       </motion.h2>
 
       <motion.div

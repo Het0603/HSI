@@ -36,7 +36,7 @@ export default function Hero() {
             From field to clinic, our digital ecosystem drives impactful change in the lives of animals — one vaccination, one rescue, one treatment at a time.
           </motion.p>
 
-          <button onClick={() => router.push('/login')}
+          <button onClick={() => router.push('https://web.hsapps.org/login')}
             className="mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl"
           >
             Login

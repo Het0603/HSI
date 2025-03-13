@@ -62,7 +62,7 @@ export default function BlogSection() {
                initial={{ opacity: 0, y: 50 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true, amount: 0.3 }}
-               transition={{ duration: 0.8, ease: "easeOut" }} className="py-12 relative w-full px-6 sm:px-12 md:px-16 lg:px-24 mx-auto">
+               transition={{ duration: 0.8, ease: "easeOut" }} className="py-12 relative w-full px-6 sm:px-12 md:px-16 lg:px-24 mx-auto bg-[#f8f8f8]">
                <motion.h2
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ export default function BlogSection() {
                                    whileInView={{ opacity: 1, y: 0 }}
                                    viewport={{ once: true, amount: 0.3 }}
                                    transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
-                                   className="bg-[#FAFAFA] rounded-xl overflow-hidden"
+                                   className="rounded-xl overflow-hidden"
                               >
                                    <div className="overflow-hidden rounded-2xl relative group">
                                         <div className="transition-all duration-300 transform group-hover:scale-105 ease-in-out">
@@ -112,7 +112,7 @@ export default function BlogSection() {
                               whileInView={{ opacity: 1, y: 0 }}
                               viewport={{ once: true, amount: 0.3 }}
                               transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
-                              className="bg-[#FAFAFA] rounded-xl overflow-hidden"
+                              className="bg-white shadow-md rounded-xl overflow-hidden"
                          >
                               <div className="overflow-hidden rounded-2xl relative group">
                                    <div className="transition-all duration-300 transform group-hover:scale-105 ease-in-out">

@@ -30,7 +30,7 @@ export default function hero({ imageSrc, title, description }) {
                          >
                               {description}
                          </motion.p>
-                         <button onClick={() => router.push('/login')} className="mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl">
+                         <button onClick={() => router.push('https://web.hsapps.org/login')} className="mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl">
                               Login
                          </button>
                     </div>
