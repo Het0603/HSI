@@ -54,7 +54,7 @@ export default function CampaignSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }} className="text-[#005944] text-2xl sm:text-4xl md:text-5xl font-bold mb-8">
-        Programs Using Humane World App
+        Programs Using Humane World Apps
       </motion.h2>
 
       <motion.div

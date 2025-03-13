@@ -9,8 +9,8 @@ import DonationSection from "@/components/DonationSection";
 import BlogSection from "@/components/BlogSection";
 import VideoSection from "@/components/VideoSection";
 import NewsletterSection from "@/components/NewsletterSection";
-import mission from "../../public/mission.jpg";
-import hero2 from "../../public/hero2.jpg";
+import mission from "../../public/LindaPataRat.png";
+import hero2 from "../../public/LindaPataRat1.png";
 
 export default function Home() {
   return (
@@ -44,6 +44,7 @@ export default function Home() {
         alignment="md:flex-row"
         textColor="text-white"
         headingColor="text-[#5EC9FF]"
+        imageMargin="ml-auto"
       />
       <VideoSection />
       <BlogSection />

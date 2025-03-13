@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import hero1 from "../../public/hero1.png";
 import imageCut from "../../public/imageCut.svg";
 import { useRouter } from "next/router";
+import logo2 from "../../public/mobileAppLogoWhite.svg";
 
 export default function Hero() {
   const router = useRouter();
@@ -24,7 +25,19 @@ export default function Hero() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold max-w-[50rem]"
           >
-            <span>Humane World App</span>
+            <div className="flex items-center space-x-2">
+              <Image 
+                src={logo2} 
+                width={80} 
+                height={10} 
+                alt="Logo" 
+                className="w-42 h-auto md:w-38 lg:w-70 -ml-12 -mb-10"
+              />
+              <span className="text-6xl font-semibold text-center block mt-6 -ml-8">
+                Humane World <br />
+                <span className="block mx-auto">Apps</span>
+              </span>
+            </div>
           </motion.h2>
 
           <motion.p

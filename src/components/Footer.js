@@ -7,6 +7,7 @@ import linkdin from "../../public/linkdin.svg";
 import youtube from "../../public/youtube.svg";
 import xIcon from "../../public/xIcon.svg";
 import { motion } from "framer-motion";
+import logo2 from "../../public/mobileAppLogoGreen1.png";
 
 export default function Footer() {
   return (
@@ -19,7 +20,12 @@ export default function Footer() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }} className="flex items-center space-x-4 flex-col items-start space-y-5">
+          <div className="flex flex rows items-center"> 
           <Image src={logo} alt="Logo" style={{ width: 200, height: 100 }} />
+          <div className="w-[2px] h-15 md:h-25 bg-gray-500 mx-4"></div>
+          <Image src={logo2} width={160} height={60} alt="Logo" className="w-28 h-auto md:w-38 lg:w-20" />
+          <span className=" text-xs md:text-xs lg:text-2xl font-bold text-gray-900 w-[20rem] ml-2">Humane World Apps</span>
+          </div>
           <p className="text-black sm:text-lg max-w-[26rem]">Humane World for Animals is registered as
             a 501(c)(3) nonprofit organization. Contributions
             to the Humane World for Animals are tax-deductible

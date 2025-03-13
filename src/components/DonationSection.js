@@ -74,9 +74,9 @@ export default function DonationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="text-xl md:text-4xl lg:text-5xl font-bold max-w-[42rem]">
-          Humane World App Impact So Far
+          Humane World Apps Impact So Far
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12 w-full">
           {stats.map((stat, index) => (
             <CounterBox key={index} title={stat.title} target={stat.target} />
           ))}
