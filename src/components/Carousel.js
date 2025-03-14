@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import slider1 from "../../public/slider1.png";
 import slider2 from "../../public/slider2.png";
-import slider3 from "../../public/slider3.jpg";
-import slider4 from "../../public/slider4.jpg";
+import slider3 from "../../public/slider3.png";
+import slider4 from "../../public/slider4.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -138,7 +138,7 @@ export default function Carousel() {
                                              <Image
                                                   src={app.imgSrc}
                                                   alt={app.title}
-                                                  className="rounded-lg w-full h-[170px] sm:h-[210px] md:h-[250px] object-contain"
+                                                  className="rounded-lg w-full h-[170px] sm:h-[210px] md:h-[250px] object-cover"
                                              />
                                         </div>
                                    </div>
