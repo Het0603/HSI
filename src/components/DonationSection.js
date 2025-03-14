@@ -25,7 +25,7 @@ const CounterBox = ({ title, target }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-[#f8f8f8] p-6 rounded-lg shadow-lg text-center w-full sm:w-64 flex flex-col items-center"
+      className="bg-[#f8f8f8] p-2 sm:p-4 md:p-5 lg:p-6 rounded-lg shadow-lg text-center w-45 sm:w-40 md:w-50 lg:w-64 flex flex-col items-center"
     >
       <h2 className="text-3xl text-black lg:text-5xl font-bold mb-2">
         <motion.span>{displayValue}</motion.span>
@@ -68,7 +68,7 @@ export default function DonationSection() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="relative z-10 flex flex-col items-start justify-center h-full text-white px-6 md:px-16 lg:px-24 gap-8">
+        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="relative z-10 flex flex-col items-start justify-center h-full text-white px-6 md:px-16 lg:px-24 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function DonationSection() {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="text-xl md:text-4xl lg:text-5xl font-bold max-w-[42rem]">
           Humane World Apps Impact So Far
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12 w-full">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
           {stats.map((stat, index) => (
             <CounterBox key={index} title={stat.title} target={stat.target} />
           ))}

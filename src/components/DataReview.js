@@ -7,7 +7,7 @@ export default function dataReview({ imageSrc, title, description }) {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                transition={{ duration: 1, ease: "easeOut" }}
-               className="bg-[#005944] text-white py-18 px-6 md:px-16 lg:px-24"
+               className="bg-[#005944] text-white py-18 px-6 md:px-16 lg:px-24 overflow-hidden"
           >
                <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                     <motion.div

@@ -12,20 +12,6 @@ import { useRouter } from "next/router";
 
 const applications = [
      {
-          title: "App Platform",
-          description:
-               `HSIApps is an application platform similar to Google's suite of office apps (Docs, Sheets, Slides) enabling sharing of teams/assets across all projects.<br><br>
-                Population Management and Mass Vaccination are the first two apps on the platform and are available free of use to qualified organizations.<br><br>    
-               <strong>Key Features:</strong><br>
-    - Single login across all apps<br>
-    - Essentially unlimited number of projects<br>
-    - Shared team/asset setup can be shared across all projects<br>
-    - Project sharing with Viewers or Editors for team management<br>
-    - Accompanying mobile (Android) application for field work/data collection: GPS tracking, barcode scanning and image capture with off-line mode to handle poor/intermittent connectivity.`,
-          imgSrc: slider1,
-          link: "/",
-     },
-     {
           title: "Mass Vaccination",
           description:
                `The Mass Vaccination app streamlines administering large number of vaccinations in the field to ensure resources are optimally deployed and the maximum number of animals impacted.<br><br>
@@ -55,6 +41,19 @@ const applications = [
           link: "/population-management",
      },
      {
+          title: "Health Clinic",
+          description:
+               `The field app (Android only) has application specific features (PM or MV) which optimize the field users' data collection.<br><br>
+               <strong>Key Features:</strong><br>
+    - Easy to use<br>
+    - Warns users if outside their assigned geofence<br>
+    - Offline/sync mode for when offline or poor/spotty internet.<br>
+    - Heath record database for sterilization clinic management<br>
+    - Release Lock feature (PM Only) - animals are geotagged on capture and field teams are required to release sterilized animals within 50M of capture.`,
+          imgSrc: slider4,
+          link: "/health-clinic",
+     },
+     {
           title: "Mobile App",
           description:
                `The field app (Android only) has application specific features (PM or MV) which optimize the field users' data collection.<br><br>
@@ -65,6 +64,20 @@ const applications = [
     - Heath record database for sterilization clinic management<br>
     - Release Lock feature (PM Only) - animals are geotagged on capture and field teams are required to release sterilized animals within 50M of capture.`,
           imgSrc: slider4,
+          link: "/",
+     },
+     {
+          title: "App Platform",
+          description:
+               `HSIApps is an application platform similar to Google's suite of office apps (Docs, Sheets, Slides) enabling sharing of teams/assets across all projects.<br><br>
+                Population Management and Mass Vaccination are the first two apps on the platform and are available free of use to qualified organizations.<br><br>    
+               <strong>Key Features:</strong><br>
+    - Single login across all apps<br>
+    - Essentially unlimited number of projects<br>
+    - Shared team/asset setup can be shared across all projects<br>
+    - Project sharing with Viewers or Editors for team management<br>
+    - Accompanying mobile (Android) application for field work/data collection: GPS tracking, barcode scanning and image capture with off-line mode to handle poor/intermittent connectivity.`,
+          imgSrc: slider1,
           link: "/",
      },
 ];

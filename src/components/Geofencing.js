@@ -8,7 +8,7 @@ export default function Geofencing({ imageSrc, title, description }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex flex-col-reverse md:flex-row items-center justify-between py-16 bg-gray-100 gap-8 px-6 md:px-16 lg:px-24"
+      className="flex flex-col-reverse md:flex-row items-center justify-between py-16 bg-gray-100 gap-8 px-6 md:px-16 lg:px-24 overflow-hidden"
     >
       <motion.div
         className="md:w-1/2"

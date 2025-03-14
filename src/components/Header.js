@@ -20,12 +20,12 @@ export default function Header() {
       <div className="font-sans">
         <nav className="mx-auto px-6 md:px-16 sm:px-24 flex justify-between items-center py-4 lg:py-0 bg-white shadow-md">
           <Link href="/" className="flex items-center">
-            <Image src={logo} width={160} height={60} alt="Logo" className="w-28 h-auto md:w-38 lg:w-42" />
+            <Image src={logo} width={160} height={60} alt="Logo" className="w-26 h-auto sm:w-25 md:w-38 lg:w-42" />
           </Link>
           <div className="w-[1px] h-8 md:h-14 bg-gray-500 mx-2"></div>
-          <Link href="/" className="flex items-center"> 
-          <Image src={logo2} width={160} height={60} alt="Logo" className="w-28 h-auto md:w-38 lg:w-10" />
-            <span className=" text-xs md:text-xs lg:text-sm font-bold text-gray-900 w-[12rem] ml-2">Humane World Apps</span>
+          <Link href="/" className="flex items-center">
+            <Image src={logo2} width={160} height={60} alt="Logo" className="w-7 h-auto sm:w-10 md:w-15 lg:w-10" />
+            <span className=" text-xs md:text-xs lg:text-sm font-bold text-gray-900 lg:w-[12rem] ml-2">Humane World Apps</span>
           </Link>
 
           <ul className="hidden lg:flex items-center space-x-6 text-gray-700 md:w-[100rem] md:justify-end pr-5">
@@ -42,6 +42,7 @@ export default function Header() {
                 <ul className="absolute top-full left-0 w-55 bg-white shadow-lg border rounded-md z-10">
                   <li><Link href="/mass-vaccination" className="block px-4 py-2 hover:rounded-md hover:bg-gray-100">Mass-Vaccination</Link></li>
                   <li><Link href="/population-management" className="block px-4 py-2 hover:rounded-md hover:bg-gray-100">Population-Management</Link></li>
+                  <li><Link href="/health-clinic" className="block px-4 py-2 hover:rounded-md hover:bg-gray-100">Health-Clinic</Link></li>
                 </ul>
               )}
             </li>
@@ -74,6 +75,7 @@ export default function Header() {
                   <ul className="mt-2 pl-4 border-l">
                     <li><Link href="/mass-vaccination" className="block py-2 hover:text-blue-500">Mass-Vaccination</Link></li>
                     <li><Link href="/population-management" className="block py-2 hover:text-blue-500">Population-Management</Link></li>
+                    <li><Link href="/health-clinic" className="block py-2 hover:text-blue-500">Health-Clinic</Link></li>
                   </ul>
                 )}
               </li>
