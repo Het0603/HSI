@@ -9,7 +9,7 @@ export default function fieldData({ imageSrc, title, description }) {
                transition={{ duration: 1, ease: "easeOut" }}
                className="bg-[#F4F4F4] text-white py-24 px-6 md:px-16 lg:px-24"
           >
-               <div className="flex flex-col-reverse md:flex-row items-center gap-8">
+               <div className="flex flex-col-reverse md:flex-row items-center gap-8 overflow-hidden">
                     <motion.div
                          className="md:w-1/2"
                          initial={{ opacity: 0, scale: 0.8 }}

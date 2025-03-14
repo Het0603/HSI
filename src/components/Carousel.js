@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import slider1 from "../../public/slider1.png";
 import slider2 from "../../public/slider2.png";
-import slider3 from "../../public/slider3.jpg";
-import slider4 from "../../public/slider4.jpg";
+import slider3 from "../../public/slider3.png";
+import slider4 from "../../public/slider4.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -11,20 +11,6 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 const applications = [
-     {
-          title: "App Platform",
-          description:
-               `HSIApps is an application platform similar to Google's suite of office apps (Docs, Sheets, Slides) enabling sharing of teams/assets across all projects.<br><br>
-                Population Management and Mass Vaccination are the first two apps on the platform and are available free of use to qualified organizations.<br><br>    
-               <strong>Key Features:</strong><br>
-    - Single login across all apps<br>
-    - Essentially unlimited number of projects<br>
-    - Shared team/asset setup can be shared across all projects<br>
-    - Project sharing with Viewers or Editors for team management<br>
-    - Accompanying mobile (Android) application for field work/data collection: GPS tracking, barcode scanning and image capture with off-line mode to handle poor/intermittent connectivity.`,
-          imgSrc: slider1,
-          link: "/",
-     },
      {
           title: "Mass Vaccination",
           description:
@@ -55,6 +41,19 @@ const applications = [
           link: "/population-management",
      },
      {
+          title: "Health Clinic",
+          description:
+               `The field app (Android only) has application specific features (PM or MV) which optimize the field users' data collection.<br><br>
+               <strong>Key Features:</strong><br>
+    - Easy to use<br>
+    - Warns users if outside their assigned geofence<br>
+    - Offline/sync mode for when offline or poor/spotty internet.<br>
+    - Heath record database for sterilization clinic management<br>
+    - Release Lock feature (PM Only) - animals are geotagged on capture and field teams are required to release sterilized animals within 50M of capture.`,
+          imgSrc: slider4,
+          link: "/health-clinic",
+     },
+     {
           title: "Mobile App",
           description:
                `The field app (Android only) has application specific features (PM or MV) which optimize the field users' data collection.<br><br>
@@ -65,6 +64,20 @@ const applications = [
     - Heath record database for sterilization clinic management<br>
     - Release Lock feature (PM Only) - animals are geotagged on capture and field teams are required to release sterilized animals within 50M of capture.`,
           imgSrc: slider4,
+          link: "/",
+     },
+     {
+          title: "App Platform",
+          description:
+               `HSIApps is an application platform similar to Google's suite of office apps (Docs, Sheets, Slides) enabling sharing of teams/assets across all projects.<br><br>
+                Population Management and Mass Vaccination are the first two apps on the platform and are available free of use to qualified organizations.<br><br>    
+               <strong>Key Features:</strong><br>
+    - Single login across all apps<br>
+    - Essentially unlimited number of projects<br>
+    - Shared team/asset setup can be shared across all projects<br>
+    - Project sharing with Viewers or Editors for team management<br>
+    - Accompanying mobile (Android) application for field work/data collection: GPS tracking, barcode scanning and image capture with off-line mode to handle poor/intermittent connectivity.`,
+          imgSrc: slider1,
           link: "/",
      },
 ];
@@ -125,7 +138,7 @@ export default function Carousel() {
                                              <Image
                                                   src={app.imgSrc}
                                                   alt={app.title}
-                                                  className="rounded-lg w-full h-[170px] sm:h-[210px] md:h-[250px] object-contain"
+                                                  className="rounded-lg w-full h-[170px] sm:h-[210px] md:h-[250px] object-cover"
                                              />
                                         </div>
                                    </div>
