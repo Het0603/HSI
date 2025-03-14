@@ -1,22 +1,22 @@
 import Image from "next/image";
-import campaign1 from '../../public/campaign1.jpg';
-import campaign2 from '../../public/campaign2.jpg';
-import campaign3 from '../../public/campaign3.jpg';
-import campaign4 from '../../public/campaign4.jpg';
-import campaign5 from '../../public/campaign5.jpg';
-import campaign6 from '../../public/campaign6.jpg';
+import Bolivia from '../../public/Bolivia.jpg';
+import Philippines from '../../public/Philippines.jpg';
+import India from '../../public/India.jpg';
+import SouthAfrica from '../../public/South-africa.jpg';
+import Chile from '../../public/Chile.jpg';
+import Vietnam from '../../public/Vietnam.jpg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 
 const campaignAreas = [
-  { id: 1, image: campaign1, location: "Bolivia" },
-  { id: 2, image: campaign2, location: "Chile" },
-  { id: 3, image: campaign3, location: "South Africa" },
-  { id: 4, image: campaign4, location: "India" },
-  { id: 5, image: campaign5, location: "Philippines" },
-  { id: 6, image: campaign6, location: "Vietnam" },
+  { id: 1, image: Bolivia, location: "Bolivia" },
+  { id: 2, image: Chile, location: "Chile" },
+  { id: 3, image: SouthAfrica, location: "South Africa" },
+  { id: 4, image: India, location: "India" },
+  { id: 5, image: Philippines, location: "Philippines" },
+  { id: 6, image: Vietnam, location: "Vietnam" },
 ];
 
 export default function CampaignSection() {
@@ -76,7 +76,7 @@ export default function CampaignSection() {
                   <Image
                     src={area.image}
                     alt={area.location}
-                    className="h-auto object-cover rounded-3xl"
+                    className="h-[288px] sm:h-[356px] object-cover rounded-3xl"
                   />
                 </div>
               </motion.div>
@@ -107,7 +107,7 @@ export default function CampaignSection() {
                 <Image
                   src={area.image}
                   alt={area.location}
-                  className="w-full h-auto object-cover rounded-2xl"
+                  className="w-full h-[215px] md:h-[175px] lg:h-[283px] object-cover rounded-2xl"
                 />
               </div>
             </div>
