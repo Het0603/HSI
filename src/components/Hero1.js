@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import hero1 from "../../public/hero1.jpg";
 import imageCut from "../../public/imageCut.svg";
 import { useRouter } from "next/router";
-import logo2 from "../../public/mobileAppLogoWhite.svg";
+import logo2 from "../../public/mobileAppLogoWhite.png";
 
 export default function Hero() {
   const router = useRouter();
