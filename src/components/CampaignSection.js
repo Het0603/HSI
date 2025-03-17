@@ -55,7 +55,7 @@ export default function CampaignSection() {
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }} className="text-[#005944] text-2xl sm:text-4xl md:text-5xl font-bold mb-8">
+        transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }} style={{ fontFamily: "SharpGrotesk" }} className="text-[#00352C] text-3xl sm:text-4xl md:text-5xl font-bold mb-8">
         Programs Using Humane World Apps
       </motion.h2>
 
@@ -84,7 +84,7 @@ export default function CampaignSection() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }} className="mt-3 text-lg font-semibold text-[#005944]">{area.location}</motion.p>
+                transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }} className="mt-3 text-lg font-semibold text-[#00352C]">{area.location}</motion.p>
             </div>
           ))}
         </Slider>
@@ -115,7 +115,7 @@ export default function CampaignSection() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: 0.1 * index + 0.2, ease: "easeOut" }} className="mt-3 text-lg font-semibold text-[#005944]">{area.location}</motion.p>
+              transition={{ duration: 0.5, delay: 0.1 * index + 0.2, ease: "easeOut" }} className="mt-3 text-lg font-semibold text-[#00352C]">{area.location}</motion.p>
           </motion.div>
         ))}
       </motion.div>

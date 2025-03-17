@@ -33,7 +33,7 @@ export default function fieldData({ imageSrc, title, description }) {
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                         <h2 className="text-xl sm:text-3xl md:text-4xl text-[#005944] font-bold mt-2 max-w-[25rem]">
+                         <h2 className="text-xl sm:text-3xl md:text-4xl text-[#00352C] font-bold mt-2 max-w-[25rem]">
                               {title}
                          </h2>
                          <p className="mt-4 sm:text-xl md:text-2xl text-black max-w-[29rem]" dangerouslySetInnerHTML={{ __html: description }}>

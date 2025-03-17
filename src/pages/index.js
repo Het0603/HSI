@@ -30,8 +30,8 @@ export default function Home() {
         bgColor="bg-[#f8f8f8]"
         alignment="md:flex-row-reverse"
         textColor="text-black"
-        headingColor="text-[#005944]"
-        buttonBgColor="#005944"
+        headingColor="text-[#00352C]"
+        buttonBgColor="#00352C"
       />
       <MissionSection
         title="Bold work, global mission"
@@ -40,7 +40,7 @@ export default function Home() {
         Discover what we’re doing to stop animal cruelty and suffering for good.`}
         buttonText="Find out"
         imageSrc={mission}
-        bgColor="bg-[#005944]"
+        bgColor="bg-[#00352C]"
         alignment="md:flex-row"
         textColor="text-white"
         headingColor="text-[#5EC9FF]"

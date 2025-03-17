@@ -51,7 +51,7 @@ export default function NewsletterSection() {
                initial={{ opacity: 0, y: 50 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true, amount: 0.3 }}
-               transition={{ duration: 0.8, ease: "easeOut" }} className="bg-[#005944] py-16 px-6 md:px-16 lg:px-24">
+               transition={{ duration: 0.8, ease: "easeOut" }} className="bg-[#00352C] py-16 px-6 md:px-16 lg:px-24">
                <div className=" mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-24">
 
                     <motion.div
@@ -87,7 +87,7 @@ export default function NewsletterSection() {
                          whileInView={{ opacity: 1, x: 0 }}
                          viewport={{ once: true, amount: 0.3 }}
                          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="w-full md:w-1/2 bg-[#f8f8f8] rounded-3xl shadow-lg p-6 md:p-8">
-                         <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#005944]">Keep me up to date!</h3>
+                         <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#00352C]">Keep me up to date!</h3>
                          <p className="text-[#474747] mt-2 sm:text-lg md:text-xl max-w-full md:max-w-[25rem]">Get the latest news and quick, simple actions you can take to help animals each week</p>
 
                          {error && <p className="text-red-600 mt-4">{error}</p>}
@@ -147,7 +147,7 @@ export default function NewsletterSection() {
                               </div>
 
                               <p className="text-sm text-[#3E3B3B] mt-4 max-w-[22rem]">
-                                   By providing your mobile number, you agree to receive periodic text messages from Humane World for Animals with updates and ways you can help animals. Msg & data rates may apply. Text STOP to 77879 to opt out, HELP for info. <a href="#" className="text-[#005944] font-medium">Privacy Policy, Terms & Conditions</a>.
+                                   By providing your mobile number, you agree to receive periodic text messages from Humane World for Animals with updates and ways you can help animals. Msg & data rates may apply. Text STOP to 77879 to opt out, HELP for info. <a href="#" className="text-[#00352C] font-medium">Privacy Policy, Terms & Conditions</a>.
                               </p>
 
                               <button type="submit" className="mt-6 w-full bg-[#009CEB] hover:bg-blue-600 text-white py-3 rounded-lg font-bold">Get Email Alerts</button>

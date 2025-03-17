@@ -125,7 +125,8 @@ export default function Carousel() {
                     variants={textVariants}
                     initial="hidden"
                     animate="visible"
-                    className="text-[#005944] text-2xl sm:text-4xl md:text-5xl font-bold p-4 mb-2"
+                    className="text-[#00352C] text-3xl sm:text-4xl md:text-5xl font-bold p-3 mb-2"
+                    style={{ fontFamily: "SharpGrotesk" }}
                >
                     Applications
                </motion.h2>
@@ -149,7 +150,8 @@ export default function Carousel() {
                                              initial="hidden"
                                              animate="visible"
                                              custom={index}
-                                             className="text-lg font-medium pb-3 text-[#005944] text-center"
+                                             className="text-xl font-medium pb-3 text-[#00352C] text-center"
+                                             style={{ fontFamily: "SharpGrotesk" }}
                                         >
                                              {app.title}
                                         </motion.h2>
@@ -194,7 +196,7 @@ export default function Carousel() {
                     ))}
                </Slider>
                {/* <div className="flex justify-center text-center mt-4">
-                    <button className="bg-[#005944] text-center block text-white px-5 py-2 rounded">
+                    <button className="bg-[#00352C] text-center block text-white px-5 py-2 rounded">
                          View all →
                     </button>
                </div> */}
@@ -219,7 +221,7 @@ export default function Carousel() {
                               >
                                    ✕
                               </button>
-                              <h2 className="text-2xl font-bold text-[#005944] mb-4">
+                              <h2 className="text-2xl font-bold text-[#00352C] mb-4">
                                    {selectedApp.title}
                               </h2>
                               <p className="text-gray-700" dangerouslySetInnerHTML={{ __html: selectedApp.description }}></p>

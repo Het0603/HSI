@@ -31,7 +31,7 @@ export default function dataReview2({ imageSrc, title, description }) {
                          initial={{ opacity: 0, x: 50 }}
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.8, ease: "easeOut" }}>
-                         <h2 className="text-xl sm:text-3xl md:text-4xl text-[#005944] font-bold mt-2 ">
+                         <h2 className="text-xl sm:text-3xl md:text-4xl text-[#00352C] font-bold mt-2 ">
                               {title}
                          </h2>
                          <p className="mt-4 sm:text-xl md:text-2xl text-black " dangerouslySetInnerHTML={{ __html: description }}>

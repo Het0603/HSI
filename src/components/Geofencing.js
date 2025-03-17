@@ -32,7 +32,7 @@ export default function Geofencing({ imageSrc, title, description }) {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold text-[#005944]">{title}</h2>
+        <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold text-[#00352C]">{title}</h2>
         <p className="mt-4 sm:text-lg md:text-xl" dangerouslySetInnerHTML={{ __html: description }}></p>
       </motion.div>
     </motion.section>
