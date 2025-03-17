@@ -11,7 +11,7 @@ export default function Hero() {
   const router = useRouter();
   return (
     <section className="relative w-full">
-      <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[800px] overflow-hidden">
+      <div className="relative w-full h-[450px] sm:h-[500px] md:h-[600px] lg:h-[800px] overflow-hidden">
         <Image
           src={hero1}
           alt="Hero Image"
@@ -53,7 +53,7 @@ export default function Hero() {
           </motion.p>
 
           <button onClick={() => router.push('https://web.hsapps.org/login')}
-            className="mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl"
+            className="w-full sm:w-[12%] mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl"
           >
             Login
           </button>

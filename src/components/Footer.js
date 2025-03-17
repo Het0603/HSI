@@ -50,7 +50,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.7 }} className="md:flex flex-col text-center items-center space-y-4 hidden">
           <button className="border-[#009CEB] border-2 md:text-lg lg:text-2xl font-semibold text-[#009CEB] md:px-2 lg:px-4 py-3 rounded-lg transition md:w-[8rem] lg:w-[13rem]">Donate</button>
-          <button className="bg-[#005944] md:text-lg lg:text-2xl font-semibold text-white md:px-2 lg:px-4 py-3 rounded-lg transition md:w-[8rem] lg:w-[13rem]">Contact Us</button>
+          <button className="bg-[#00352C] md:text-lg lg:text-2xl font-semibold text-white md:px-2 lg:px-4 py-3 rounded-lg transition md:w-[8rem] lg:w-[13rem]">Contact Us</button>
         </motion.div>
       </div>
 

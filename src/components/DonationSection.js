@@ -30,7 +30,7 @@ const CounterBox = ({ title, target }) => {
       <h2 className="text-3xl text-black lg:text-5xl font-bold mb-2">
         <motion.span>{displayValue}</motion.span>
       </h2>
-      <p className="text-lg font-medium text-[#005944] mt-auto overflow-hidden text-ellipsis whitespace-nowrap max-w-full">{title}</p>
+      <p className="text-lg font-medium text-[#00352C] mt-auto overflow-hidden text-ellipsis whitespace-nowrap max-w-full">{title}</p>
     </motion.div>
   );
 };
@@ -73,7 +73,7 @@ export default function DonationSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="text-xl md:text-4xl lg:text-5xl font-bold max-w-[42rem]">
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} style={{ fontFamily: "SharpGrotesk" }} className="text-2xl md:text-4xl lg:text-5xl font-bold max-w-[42rem]">
           Humane World Apps Impact So Far
         </motion.h2>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
@@ -87,7 +87,7 @@ export default function DonationSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }} className="mt-6 bg-[#005944] px-5 sm:px-6 py-2 rounded-lg text-white text-base sm:text-lg font-semibold shadow-lg">
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }} className="mt-6 bg-[#00352C] px-5 sm:px-6 py-2 rounded-lg text-white text-base sm:text-lg font-semibold shadow-lg">
             Learn More
           </motion.button>
           <motion.button
@@ -95,7 +95,7 @@ export default function DonationSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }} className="mt-6 bg-[#005944] px-5 sm:px-6 py-2 rounded-lg text-white text-base sm:text-lg font-semibold shadow-lg">
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }} className="mt-6 bg-[#00352C] px-5 sm:px-6 py-2 rounded-lg text-white text-base sm:text-lg font-semibold shadow-lg">
             Support Our Mission
           </motion.button>
         </div>

@@ -67,7 +67,7 @@ export default function BlogSection() {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="text-[#005944] text-2xl sm:text-4xl md:text-5xl font-bold mb-8">
+                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} style={{ fontFamily: "SharpGrotesk" }} className="text-[#00352C] text-3xl sm:text-4xl md:text-5xl font-bold mb-8">
                     A Humane World Blog
                </motion.h2>
 
@@ -92,7 +92,7 @@ export default function BlogSection() {
                                         </div>
                                    </div>
                                    <div className="p-5">
-                                        <h3 className="text-xl md:text-2xl font-semibold text-[#005944]">
+                                        <h3 className="text-xl md:text-2xl font-semibold text-[#00352C]">
                                              {blog.title}
                                         </h3>
                                         <p className="text-[#1A5CC7] md:text-lg mt-1">{blog.description}</p>
@@ -124,7 +124,7 @@ export default function BlogSection() {
                                    </div>
                               </div>
                               <div className="p-5">
-                                   <h3 className="text-2xl font-semibold text-[#005944]">
+                                   <h3 className="text-2xl font-semibold text-[#00352C]">
                                         {blog.title}
                                    </h3>
                                    <p className="text-[#1A5CC7] text-lg mt-1">{blog.description}</p>
@@ -139,7 +139,7 @@ export default function BlogSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }} className="flex justify-center text-center mt-12">
-                    <button className="bg-[#005944] hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg flex items-center justify-center gap-2">
+                    <button className="bg-[#00352C] hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg flex items-center justify-center gap-2">
                          Read the blog →
                     </button>
                </motion.div>

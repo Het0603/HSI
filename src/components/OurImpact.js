@@ -32,7 +32,7 @@ const CounterBox = ({ title, target }) => {
       <h2 className="text-3xl lg:text-5xl font-bold mb-2">
         <motion.span>{displayValue}</motion.span>
       </h2>
-      <p className="text-lg font-medium text-[#005944] mt-auto">{title}</p>
+      <p className="text-lg font-medium text-[#00352C] mt-auto">{title}</p>
     </motion.div>
   );
 };
@@ -58,7 +58,7 @@ export default function OurImpact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        className="text-[#005944] text-2xl sm:text-4xl md:text-5xl font-bold mb-8"
+        className="text-[#00352C] text-2xl sm:text-4xl md:text-5xl font-bold mb-8"
       >
         Our Impact So Far
       </motion.h2>

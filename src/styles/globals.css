@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@font-face {
+     font-family: "SharpGrotesk";
+     src: url("/fonts/SharpGrotesk-Medium15.otf") format("opentype");
+     font-style: normal;
+   }

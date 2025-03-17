@@ -12,7 +12,7 @@ export default function surveyFeature() {
                className="bg-white h-[50rem] md:h-[55rem] lg:h-[64rem]"
           >
                <div className="relative py-16 md:px-16 lg:px-24 h-160 object-cover bg-cover bg-center" style={{ backgroundImage: `url(${videoSection.src})` }}>
-                    <div className="absolute inset-0 bg-[#005944] opacity-70"></div>
+                    <div className="absolute inset-0 bg-[#00352C] opacity-70"></div>
 
                     <motion.div
                          initial={{ opacity: 0, y: 30 }}
