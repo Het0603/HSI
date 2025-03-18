@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Bolivia from '../../public/Bolivia.jpg';
-import Philippines from '../../public/Philippines.jpg';
+import CostaRica from '../../public/CostaRica.jpg';
 import India from '../../public/India.jpg';
 import SouthAfrica from '../../public/South-africa.jpg';
 import Chile from '../../public/Chile.jpg';
@@ -15,7 +15,7 @@ const campaignAreas = [
   { id: 2, image: Chile, location: "Chile" },
   { id: 3, image: SouthAfrica, location: "South Africa" },
   { id: 4, image: India, location: "India" },
-  { id: 5, image: Philippines, location: "Philippines" },
+  { id: 5, image: CostaRica, location: "Costa Rica" },
   { id: 6, image: Vietnam, location: "Vietnam" },
 ];
 
@@ -76,7 +76,7 @@ export default function CampaignSection() {
                   <Image
                     src={area.image}
                     alt={area.location}
-                    className="h-[288px] sm:h-[356px] object-cover rounded-3xl"
+                    className="h-[288px] sm:h-[356px] object-cover rounded-3xl w-full"
                   />
                 </div>
               </motion.div>
