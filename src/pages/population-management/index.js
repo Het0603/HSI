@@ -56,5 +56,5 @@ export default function PopulationManagement() {
       />
       <Footer />
     </div>
-  );
+  ); 
 }
