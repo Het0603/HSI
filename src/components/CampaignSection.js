@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Bolivia from '../../public/Bolivia.jpg';
-import CostaRica from '../../public/CostaRica.jpg';
+import CostaRica from '../../public/CostaRica.Jpg';
 import India from '../../public/India.jpg';
 import SouthAfrica from '../../public/South-africa.jpg';
 import Chile from '../../public/Chile.jpg';
