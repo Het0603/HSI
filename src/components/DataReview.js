@@ -15,11 +15,11 @@ export default function dataReview({ imageSrc, title, description }) {
                          initial={{ opacity: 0, x: -50 }}
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.8, ease: "easeOut" }}>
-                         <h2 className="text-xl sm:text-3xl md:text-4xl text-[#5EC9FF] font-bold mt-2 max-w-[25rem]">
+                         <h2 className="text-xl sm:text-3xl md:text-4xl text-[#5EC9FF] font-bold mt-2 max-w-[40rem]">
                               {title}
                          </h2>
-                         <p className="mt-4 sm:text-xl md:text-2xl leading-relaxed max-w-[29rem]" dangerouslySetInnerHTML={{ __html: description }}>
-                         </p>
+                         <div className="mt-8 sm:text-xl md:text-2xl leading-relaxed max-w-[40rem]" dangerouslySetInnerHTML={{ __html: description }}>
+                         </div>
                     </motion.div>
 
                     <motion.div

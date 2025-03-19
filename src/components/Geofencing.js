@@ -8,7 +8,7 @@ export default function Geofencing({ imageSrc, title, description }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex flex-col-reverse md:flex-row items-center justify-between py-16 bg-gray-100 gap-8 px-6 md:px-16 lg:px-24 overflow-hidden"
+      className="flex flex-col-reverse md:flex-row items-center justify-between py-16 bg-gray-100 gap-8 px-6 md:px-16 lg:px-24 overflow-hidden bg-[#f8f8f8]"
     >
       <motion.div
         className="md:w-1/2"
@@ -16,7 +16,7 @@ export default function Geofencing({ imageSrc, title, description }) {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="overflow-hidden rounded-4xl relative group">
+        <div className="overflow-hidden rounded-4xl relative group bg-[#f8f8f8]">
           <div className="transition-all duration-300 transform group-hover:scale-105 ease-in-out">
             <Image
               src={imageSrc}
@@ -33,7 +33,7 @@ export default function Geofencing({ imageSrc, title, description }) {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <h2 className="text-xl sm:text-3xl md:text-4xl font-semibold text-[#00352C]">{title}</h2>
-        <p className="mt-4 sm:text-lg md:text-xl" dangerouslySetInnerHTML={{ __html: description }}></p>
+        <div className="mt-8 sm:text-lg md:text-2xl" dangerouslySetInnerHTML={{ __html: description }}></div>
       </motion.div>
     </motion.section>
   );

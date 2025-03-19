@@ -7,7 +7,7 @@ export default function dataReview2({ imageSrc, title, description }) {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                transition={{ duration: 1, ease: "easeOut" }}
-               className="bg-[#F4F4F4] text-white py-18 px-6 md:px-16 lg:px-24 overflow-hidden"
+               className="bg-[#F8F8F8] text-white py-18 px-6 md:px-16 lg:px-24 overflow-hidden"
           >
                <div className="flex flex-col-reverse md:flex-row items-center gap-8">
                     <motion.div
@@ -34,8 +34,8 @@ export default function dataReview2({ imageSrc, title, description }) {
                          <h2 className="text-xl sm:text-3xl md:text-4xl text-[#00352C] font-bold mt-2 ">
                               {title}
                          </h2>
-                         <p className="mt-4 sm:text-xl md:text-2xl text-black " dangerouslySetInnerHTML={{ __html: description }}>
-                         </p>
+                         <div className="mt-8 sm:text-xl md:text-2xl text-black " dangerouslySetInnerHTML={{ __html: description }}>
+                         </div>
                     </motion.div>
                </div>
           </motion.section>

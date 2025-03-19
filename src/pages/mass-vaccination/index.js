@@ -5,12 +5,11 @@ import Geofencing from "@/components/Geofencing";
 import DataReview from "@/components/DataReview";
 import DataReview2 from "@/components/DataReview2";
 import SurveyFeature from "@/components/SurveyFeature";
-import FieldData from "@/components/FieldData";
 import hero2 from '../../../public/hero2.jpg'
 import geofencing from "../../../public/geofencing.jpg";
 import dataReviewImg from "../../../public/dataReview.png";
 import dataReviewImg2 from "../../../public/dataReview2.jpg";
-import fieldDataImg from "../../../public/fieldData.png";
+import mobile from '../../../public/mobile.svg';
 
 export default function MassVaccination() {
   return (
@@ -19,28 +18,43 @@ export default function MassVaccination() {
       <Hero
         imageSrc={hero2}
         title="Mass Vaccination"
-        description="Optimize mass vaccination efforts by leveraging technology with customized workflows. Organize large projects by deploying teams to smaller areas with geofences for vaccination and surveys. The Android field app streamlines data collection and increases team throughput while the web app ensures program managers meet their vaccination objectives." 
+        subHeader="Optimize mass vaccination efforts by leveraging technology with customized workflows."
+        description="The Mass Vaccination Program at Humane World for Animals is a pivotal initiative aimed at preventing the spread of life-threatening diseases, such as rabies, among community animals. Leveraging advanced technological tools, we empower project managers and field teams to conduct vaccination campaigns that are meticulously organized, effectively monitored, and profoundly impactful." 
         />
       <Geofencing
         imageSrc={geofencing}
-        title="Geofencing"
-        description={`Divide and conquer large vaccination efforts by splitting teams into smaller areas. Setting up a geo-fence (virtual boundary) for each team will ensure no overlap in vaccination efforts. The app will keep users in their assigned area and warn them if they go outside the geo-fence.`}
+        title="How It Works"
+        description={`
+          <p><strong>Project Initiation:</strong> Project Managers launch vaccination projects by defining specific geographical zones using intuitive KML tools.</p>
+          <p><strong>Team Assignment:</strong> Designated areas are assigned to field team members with roles as Surveyors and Vaccinators.</p>
+          <p><strong>Survey and Data Collection:</strong> Surveyors perform initial assessments to document the number of vaccinated and unvaccinated animals within the target areas.</p>
+          <p><strong>Vaccination Drives:</strong> Vaccinators execute systematic vaccination efforts in their assigned zones, ensuring comprehensive coverage.</p>
+        `}        
       />
       <DataReview
         imageSrc={dataReviewImg}
-        title="Real-time Dashboards & Data review"
-        description={`he dashboard feature allows for realtime project status and decision making. Admin users can get a real-time bird’s-eye view of the Project on maps, monitoring areas or smaller streets that might be overlooked. These features increase team coordination and prevent potential missed areas.`}
+        title="Technology in Action"
+        description={`
+          <p><strong>Digital Mapping:</strong> Accurate delineation of campaign areas using advanced mapping tools.</p>
+          <p><strong>Real-Time Data Tracking:</strong> Continuous monitoring of vaccination statuses through integrated data systems.</p>
+          <p><strong>Mobile Field Reporting:</strong> Field teams utilize mobile applications for immediate data entry and reporting.</p>
+          <p><strong>Analytical Dashboards:</strong> Project performance is analyzed through comprehensive web-based dashboards, facilitating informed decision-making.</p>
+        `}        
       />
       <DataReview2
         imageSrc={dataReviewImg2}
-        title="Reporting & Data Export"
-        description={`The HSIApps Web application provides a dynamic reporting system with options to view pre-defined reports in PDF format and download data into CSV for custom analysis.`}
+        title="Impact Highlights"
+        description={`
+          <p><strong>Disease Prevention:</strong> Significant reduction in the risk of zoonotic disease outbreaks.</p>
+          <p><strong>Resource Optimization:</strong> Enhanced allocation and utilization of resources for maximum efficiency.</p>
+          <p><strong>Data-Driven Strategies:</strong> Empowered planning and execution of future campaigns based on empirical data.</p>
+        `}        
       />
-      <SurveyFeature />
-      <FieldData
-        imageSrc={fieldDataImg}
-        title="Field Data Gathering with Offline Sync"
-        description={`Record animal’s picture, GPS location, and other information about each animal vaccinated. Offline/Sync feature enables smooth handling of connectivity issues.`}
+      <SurveyFeature 
+      mobile={mobile}
+      description={`
+        <p><strong>Together, we are fostering safer environments for both animals and communities.</strong></p>
+      `}
       />
       <Footer />
     </div>

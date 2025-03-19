@@ -21,7 +21,7 @@ export default function missionSection({ title, subtitle, description, buttonTex
           <h2 className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl ${headingColor} font-bold mt-2`}>
             {title}
           </h2>
-          <p className={`mt-4 sm:text-lg leading-relaxed max-w-full ${textColor}`} dangerouslySetInnerHTML={{ __html: description }}></p>
+          <div className={`mt-4 sm:text-lg leading-relaxed max-w-full ${textColor}`} dangerouslySetInnerHTML={{ __html: description }}></div>
           <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}

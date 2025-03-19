@@ -8,7 +8,7 @@ import hero3 from '../../../public/hero3.jpg';
 import pmCatching2 from "../../../public/pm-catching2.jpg";
 import dataReviewImg3 from "../../../public/dataReview3.png";
 import dataReviewImg4 from "../../../public/dataReview4.jpg";
-import fieldDataImg2 from "../../../public/fieldDataImg2.png";
+import SurveyFeature from "@/components/SurveyFeature";
 
 export default function PopulationManagement() {
   return (
@@ -17,33 +17,44 @@ export default function PopulationManagement() {
       <Hero
         imageSrc={hero3}
         title="Population Management"
-        description="Streamline population management efforts by optimizing workflow throughout the catch, neuter & release process.  Field users gather field & clinical data for program monitoring using a mobile app while administrators setup projects and analyze results through a web app."
+        subHeader='Humane Animal Population Control with Innovative Field Operations'
+        description="The Population Management Program addresses the critical need for ethical and effective animal birth control measures. Our digital solutions facilitate humane capture, sterilization, recovery, and release processes, ensuring complete transparency and traceability throughout each step.​"
       />
       <Geofencing
         imageSrc={pmCatching2}
-        title="Field Data Gathering with Offline Sync"
-        description={`Record animal picture,  GPS location,  and other information about each animal captured.<br><br>
-                Offline/Sync feature enables smooth handling of connectivity issues.<br><br>
-                Designed for field work, the app has been designed to work with poor internet connectivity — data is cached to sync later when better connectivity is restored. This feature ensures tamper-proof data and improves standardization.<br>`}
+        title="How It Works"
+        description={`
+          <p><strong>Project Setup:</strong> Project Managers establish area-specific population control projects utilizing digital mapping and KML files.</p>
+          <p><strong>Role Assignment:</strong> Field team members are designated roles such as Catch & Release Users and Clinical Users.</p>
+          <p><strong>Humane Capture:</strong> Catch & Release Users safely capture animals and coordinate their transport to veterinary clinics.</p>
+          <p><strong>Clinical Procedures:</strong> Clinical Users perform sterilization surgeries, monitor recovery, and manage the release of animals back to their original habitats.</p>
+        `}        
       />
       <DataReview
         imageSrc={dataReviewImg3}
-        title="Release Map & GPS “lock”"
-        description={`Optimally route plan releasing animals by mapping all target release destinations<br>
-                The GPS lock feature requires the field team to release an animal within 15M of where it was picked up ensuring the animal isn’t stressed by having to find a new home and pack`}
+        title="Technology in Action"
+        description={`
+          <p><strong>RFID Tagging:</strong> Implementation of RFID technology for precise animal identification and tracking.</p>
+          <p><strong>GPS Coordination:</strong> Utilization of GPS for accurate field assignments and activity monitoring.</p>
+          <p><strong>Digital Clinic Management:</strong> Streamlined clinical workflows and recovery records through digital platforms.</p>
+          <p><strong>Comprehensive Documentation:</strong> Detailed records of each animal's journey from capture to release.</p>
+        `}        
       />
       <DataReview2
         imageSrc={dataReviewImg4}
-        title="Clinic records management"
-        description={`From capture to clinic care to release, a built-in health records system captures all the details of the sterilization procedure as well as exams or other treatments while the animal is in-care at the clinic<br><br>
-                A sister phone app facilitates RFID barcode scanning.  Both the web app and phone app are designed to handle spotty internet connections caching data until connections are restored.`}
+        title="Impact Highlights"
+        description={`
+          <p><strong>Population Control:</strong> Achieving sustainable reductions in stray animal populations.</p>
+          <p><strong>Ethical Practices:</strong> Ensuring humane treatment and care for all animals involved.</p>
+          <p><strong>Transparency:</strong> Maintaining clear and accessible records for accountability and public trust.</p>
+        `}        
       />
-      <DataReview
-        imageSrc={fieldDataImg2}
-        title="Reporting & Data Export"
-        description={`The HSIApps Web application provides a dynamic reporting system with options to view pre-defined reports and download data into CSV for custom analysis.`}
+      <SurveyFeature 
+        description={`
+          <p><strong>Our commitment ensures that every animal is treated with compassion and respect throughout the process.</p>
+        `}
       />
       <Footer />
     </div>
-  );
+  ); 
 }
