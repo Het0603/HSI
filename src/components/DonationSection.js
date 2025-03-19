@@ -76,7 +76,7 @@ export default function DonationSection() {
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} style={{ fontFamily: "SharpGrotesk" }} className="text-2xl md:text-4xl lg:text-5xl font-bold max-w-[42rem]">
           Humane World Apps Impact So Far
         </motion.h2>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:w-full">
           {stats.map((stat, index) => (
             <CounterBox key={index} title={stat.title} target={stat.target} />
           ))}

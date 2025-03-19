@@ -3,7 +3,7 @@ import imageCut2 from '../../public/imageCut2.svg';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 
-export default function hero({ imageSrc, title, description }) {
+export default function hero({ imageSrc, title, description, subHeader }) {
      const router = useRouter();
      return (
           <section className="relative w-full">
@@ -18,7 +18,7 @@ export default function hero({ imageSrc, title, description }) {
                               initial={{ opacity: 0, y: 40 }}
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ duration: 1, ease: "easeOut" }}
-                              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold max-w-[45rem]"
+                              className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold max-w-[45rem]"
                          >
                               {title}
                          </motion.h2>
@@ -26,13 +26,11 @@ export default function hero({ imageSrc, title, description }) {
                               initial={{ opacity: 0, y: 40 }}
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-                              className="mt-4 text-lg sm:text-xl md:text-2xl max-w-[38rem]"
+                              className="mt-8 text-lg sm:text-xl md:text-2xl max-w-[38rem]"
                          >
+                              <span className="hidden sm:block lg:text-4xl mb-8">{subHeader}</span>
                               {description}
                          </motion.p>
-                         <button onClick={() => router.push('https://web.hsapps.org/login')} className="mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl">
-                              Login
-                         </button>
                     </div>
                     <div className="absolute -bottom-1 w-full">
                          <Image

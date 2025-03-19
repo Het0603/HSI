@@ -7,7 +7,7 @@ export default function fieldData({ imageSrc, title, description }) {
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                transition={{ duration: 1, ease: "easeOut" }}
-               className="bg-[#F4F4F4] text-white py-24 px-6 md:px-16 lg:px-24"
+               className="bg-[#F8F8F8] text-white py-24 px-6 md:px-16 lg:px-24"
           >
                <div className="flex flex-col-reverse md:flex-row items-center gap-8 overflow-hidden">
                     <motion.div
@@ -33,11 +33,11 @@ export default function fieldData({ imageSrc, title, description }) {
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                         <h2 className="text-xl sm:text-3xl md:text-4xl text-[#00352C] font-bold mt-2 max-w-[25rem]">
+                         <h2 className="text-xl sm:text-3xl md:text-4xl text-[#00352C] font-bold mt-2 max-w-[40rem]">
                               {title}
                          </h2>
-                         <p className="mt-4 sm:text-xl md:text-2xl text-black max-w-[29rem]" dangerouslySetInnerHTML={{ __html: description }}>
-                         </p>
+                         <div className="mt-4 sm:text-xl md:text-2xl text-black max-w-[40rem]" dangerouslySetInnerHTML={{ __html: description }}>
+                         </div>
                     </motion.div>
                </div>
           </motion.section>

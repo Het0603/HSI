@@ -183,7 +183,7 @@ export default function Carousel() {
                                              )}
                                         </motion.p>
                                         <div className="mt-4 flex gap-3 justify-between">
-                                             <button onClick={() => router.push('https://web.hsapps.org/login')} className="bg-[#009CEB] text-white px-4 py-2 rounded w-full sm:w-40">
+                                             <button onClick={() => router.push('https://hsapps-rebranding.pages.dev/')} className="bg-[#009CEB] text-white px-4 py-2 rounded w-full sm:w-40">
                                                   Login
                                              </button>
                                              <button onClick={() => router.push(app.link)} className="bg-transparent border border-[#009CEB] w-full sm:w-40 text-[#009CEB] px-4 py-2 rounded-lg">

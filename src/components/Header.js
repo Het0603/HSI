@@ -65,7 +65,7 @@ export default function Header() {
           <button onClick={toggleMenu} className="lg:hidden text-gray-700 focus:outline-none">
             {isOpen ? <FaTimes size={26} color="#009CEB" /> : <FaBars size={26} color="#009CEB" />}
           </button>
-          <button onClick={() => router.push('https://web.hsapps.org/login')} className="bg-[#E50913] hover:bg-green-800 text-white font-semibold px-6 py-5 sm:px-6 sm:py-2 md:px-6 md:py-2 text-sm sm:text-base md:text-lg sm:rounded-lg md:rounded-lg lg:rounded-lg shadow-lg">
+          <button onClick={() => router.push('https://hsapps-rebranding.pages.dev/')} className="bg-[#E50913] hover:bg-green-800 text-white font-semibold px-6 py-5 sm:px-6 sm:py-2 md:px-6 md:py-2 text-sm sm:text-base md:text-lg sm:rounded-lg md:rounded-lg lg:rounded-lg shadow-lg">
             Login
           </button>
         </div>
