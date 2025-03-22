@@ -30,12 +30,12 @@ export default function dataReview2({ imageSrc, title, description, multi, image
                                         <Image
                                              src={imageSrc2}
                                              alt="Data Review2"
-                                             className="rounded-4xl h-[28rem] object-contain"
+                                             className="hidden lg:block rounded-4xl h-[28rem] object-contain"
                                         />
                                         <Image
                                              src={imageSrc3}
                                              alt="Data Review3"
-                                             className="rounded-4xl h-[28rem] object-contain"
+                                             className="hidden lg:block rounded-4xl h-[28rem] object-contain"
                                         />
                                    </>}
                               </div>
