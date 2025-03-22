@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function dataReview({ imageSrc, title, description }) {
+export default function dataReview({ imageSrc, title, description, multi, imageSrc2, imageSrc3 }) {
      return (
           <motion.section
                initial={{ opacity: 0 }}
@@ -28,12 +28,28 @@ export default function dataReview({ imageSrc, title, description }) {
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.8, ease: "easeOut" }}>
                          <div className="overflow-hidden rounded-4xl relative group">
-                              <div className="transition-all duration-300 transform group-hover:scale-105 ease-in-out">
-                                   <Image
+                              <div className="transition-all flex duration-300 transform group-hover:scale-105 ease-in-out">
+                                   {!multi ? <Image
                                         src={imageSrc}
                                         alt="Data Review"
-                                        className="rounded-4xl h-[24rem]"
-                                   />
+                                        className="rounded-4xl h-[28rem] object-contain"
+                                   /> : <>
+                                        <Image
+                                             src={imageSrc}
+                                             alt="Data Review1"
+                                             className="rounded-4xl h-[28rem] object-contain"
+                                        />
+                                        <Image
+                                             src={imageSrc2}
+                                             alt="Data Review2"
+                                             className="rounded-4xl h-[28rem] object-contain"
+                                        />
+                                        <Image
+                                             src={imageSrc3}
+                                             alt="Data Review3"
+                                             className="rounded-4xl h-[28rem] object-contain"
+                                        />
+                                   </>}
                               </div>
                          </div>
                     </motion.div>

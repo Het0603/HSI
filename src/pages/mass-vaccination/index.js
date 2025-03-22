@@ -7,9 +7,9 @@ import DataReview2 from "@/components/DataReview2";
 import SurveyFeature from "@/components/SurveyFeature";
 import hero2 from '../../../public/hero2.jpg'
 import geofencing from "../../../public/geofencing.jpg";
-import dataReviewImg from "../../../public/dataReview.png";
-import dataReviewImg2 from "../../../public/dataReview2.jpg";
-import mobile from '../../../public/mobile.svg';
+import dataReviewImg from "../../../public/dataReview.jpeg";
+import dataReviewImg2 from "../../../public/dataReview2.jpeg";
+import mobile from '../../../public/mobile.jpeg';
 
 export default function MassVaccination() {
   return (
@@ -39,7 +39,8 @@ export default function MassVaccination() {
           <p><strong>Real-Time Data Tracking:</strong> Continuous monitoring of vaccination statuses through integrated data systems.</p>
           <p><strong>Mobile Field Reporting:</strong> Field teams utilize mobile applications for immediate data entry and reporting.</p>
           <p><strong>Analytical Dashboards:</strong> Project performance is analyzed through comprehensive web-based dashboards, facilitating informed decision-making.</p>
-        `}        
+        `}   
+        multi={false}     
       />
       <DataReview2
         imageSrc={dataReviewImg2}
@@ -48,10 +49,11 @@ export default function MassVaccination() {
           <p><strong>Disease Prevention:</strong> Significant reduction in the risk of zoonotic disease outbreaks.</p>
           <p><strong>Resource Optimization:</strong> Enhanced allocation and utilization of resources for maximum efficiency.</p>
           <p><strong>Data-Driven Strategies:</strong> Empowered planning and execution of future campaigns based on empirical data.</p>
-        `}        
+        `} 
+        multi={false}       
       />
       <SurveyFeature 
-      mobile={mobile}
+      imageSrc={mobile}
       description={`
         <p><strong>Together, we are fostering safer environments for both animals and communities.</strong></p>
       `}

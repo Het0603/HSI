@@ -1,9 +1,8 @@
 import Image from "next/image";
 import videoSection from '../../public/videoSection.jpg';
-import mobile from '../../public/mobile.svg';
 import { motion } from "framer-motion";
 
-export default function surveyFeature({description}) {
+export default function surveyFeature({description, imageSrc}) {
      return (
           <motion.section
                initial={{ opacity: 0 }}
@@ -30,8 +29,8 @@ export default function surveyFeature({description}) {
                               viewport={{ once: true, amount: 0.3 }}
                               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }} className="mt-10 flex justify-center"
                          >
-                              <div className=" rounded-2xl overflow-hidden relative w-auto max-h-[40rem]">
-                                   <Image src={mobile} alt="Video Thumbnail" className="w-full h-[80%] sm:h-[70%] md:h-[70%] lg:h-full object-contain" />
+                              <div className="rounded-4xl overflow-hidden relative w-auto max-h-[40rem]">
+                                   <Image src={imageSrc} alt="Video Thumbnail" className="w-full h-[80%] sm:h-[70%] md:h-[70%] lg:h-[124%] object-contain" />
                               </div>
                          </motion.div>
                     </motion.div>

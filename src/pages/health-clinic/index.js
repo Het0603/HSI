@@ -5,12 +5,11 @@ import Geofencing from "@/components/Geofencing";
 import DataReview from "@/components/DataReview";
 import DataReview2 from "@/components/DataReview2";
 import SurveyFeature from "@/components/SurveyFeature";
-import FieldData from "@/components/FieldData";
 import hero2 from '../../../public/hero2.jpg'
 import HealthClinicImg from "../../../public/healthClinic.jpg";
-import dataReviewImg from "../../../public/dataReview.png";
-import dataReviewImg2 from "../../../public/dataReview2.jpg";
-import fieldDataImg from "../../../public/fieldData.png";
+import healthClinicImg1 from "../../../public/healthClinicImg1.jpeg";
+import healthClinicImg2 from "../../../public/healthClinicImg2.jpeg";
+import mobile from '../../../public/mobile.jpeg';
 
 export default function HealthClinic() {
   return (
@@ -32,25 +31,28 @@ export default function HealthClinic() {
         `}        
       />
       <DataReview
-        imageSrc={dataReviewImg}
+        imageSrc={healthClinicImg1}
         title="Technology in Action"
         description={`
           <p><strong>Community Mapping:</strong> Identification and prioritization of areas requiring medical attention.</p>
           <p><strong>Mobile Data Capture:</strong> Efficient and accurate data entry by field teams through user-friendly mobile interfaces.</p>
           <p><strong>Health Monitoring:</strong> Continuous tracking of animal health records and treatment outcomes.</p>
           <p><strong>Outcome Analysis:</strong> Utilization of visual dashboards to assess program effectiveness and areas for improvement.</p>
-        `}        
+        `}     
+        multi={false}   
       />
       <DataReview2
-        imageSrc={dataReviewImg2}
+        imageSrc={healthClinicImg2}
         title="Impact Highlights"
         description={`
           <p><strong>Enhanced Health:</strong> Improved overall health and quality of life for community animals.</p>
           <p><strong>Preventive Care:</strong> Early detection and treatment of diseases, reducing the spread within populations.</p>
           <p><strong>Empowered Teams:</strong> Field teams equipped with advanced tools to deliver effective and compassionate care.</p>
-        `}        
+        `} 
+        multi={false}       
       />
-      <SurveyFeature 
+      <SurveyFeature
+      imageSrc={mobile} 
       description={`
         <p><strong>Each act of care</strong> brings us closer to a world where all animals thrive.</p>
       `}
