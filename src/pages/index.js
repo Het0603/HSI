@@ -23,7 +23,7 @@ export default function Home() {
       <MissionSection
         title="Humane World for Animals"
         subtitle="Who We Are"
-        description={`formerly known as the Humane Society of the United States (HSUS) and Humane Society International (HSI), we have been champions for animal welfare since 1954.<br>
+        description={`formerly known as the Humane Society of the United States (HSUS) and Humane World Apps, we have been champions for animal welfare since 1954.<br>
         Our mission is to confront and eliminate cruelty to animals worldwide, addressing issues ranging from factory farming and the fur trade to wildlife conservation and companion animal protection.`}
         buttonText="Find out"
         imageSrc={hero2}

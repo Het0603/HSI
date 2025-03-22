@@ -4,6 +4,7 @@ import slider1 from "../../public/slider1.png";
 import slider2 from "../../public/slider2.png";
 import slider3 from "../../public/slider3.png";
 import slider4 from "../../public/slider4.png";
+import AppPlateform from '../../public/AppPlateform.jpeg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -69,7 +70,7 @@ const applications = [
      {
           title: "App Platform",
           description:
-               `HSIApps is an application platform similar to Google's suite of office apps (Docs, Sheets, Slides) enabling sharing of teams/assets across all projects.<br><br>
+               `Humane World Apps is an application platform similar to Google's suite of office apps (Docs, Sheets, Slides) enabling sharing of teams/assets across all projects.<br><br>
                 Population Management and Mass Vaccination are the first two apps on the platform and are available free of use to qualified organizations.<br><br>    
                <strong>Key Features:</strong><br>
     - Single login across all apps<br>
@@ -77,7 +78,7 @@ const applications = [
     - Shared team/asset setup can be shared across all projects<br>
     - Project sharing with Viewers or Editors for team management<br>
     - Accompanying mobile (Android) application for field work/data collection: GPS tracking, barcode scanning and image capture with off-line mode to handle poor/intermittent connectivity.`,
-          imgSrc: slider1,
+          imgSrc: AppPlateform,
           link: "/",
      },
 ];

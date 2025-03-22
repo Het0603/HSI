@@ -44,7 +44,7 @@ export default function Header() {
         <ul className="hidden lg:flex items-center space-x-6 text-gray-700 md:w-[100rem] md:justify-end pr-5">
           <li><Link href="/" className="hover:text-blue-500">Home</Link></li>
           <li><Link href="/" className="hover:text-blue-500">About us</Link></li>
-          <li><Link href="/" className="hover:text-blue-500">Training resources</Link></li>
+          <li><Link href="/training-resources" className="hover:text-blue-500">Training resources</Link></li>
           <li
             className="relative group"
             onMouseEnter={() => setDropdownOpen(true)}
@@ -75,7 +75,7 @@ export default function Header() {
           <ul className="space-y-6 text-lg text-bold text-[#009CEB]" style={{ fontFamily: "SharpGrotesk" }}>
             <li><Link href="/" className="block hover:text-blue-500 pt-5 px-5">Home</Link><div className="border-b border-gray-300 my-2 w-full"></div></li>
             <li><Link href="/" className="block hover:text-blue-500 px-5">About us</Link><div className="border-b border-gray-300 my-2 w-full"></div></li>
-            <li><Link href="/" className="block hover:text-blue-500 px-5">Training resources</Link><div className="border-b border-gray-300 my-2 w-full"></div></li>
+            <li><Link href="/training-resources" className="block hover:text-blue-500 px-5">Training resources</Link><div className="border-b border-gray-300 my-2 w-full"></div></li>
             <li>
               <button onClick={() => setDropdownOpen(!dropdownOpen)} style={{ fontFamily: "SharpGrotesk" }} className="text-bold w-full text-left flex items-center px-5 gap-1 hover:text-blue-500 justify-between">
                 Our Programs <FaChevronDown size={14} />
