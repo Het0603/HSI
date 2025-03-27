@@ -12,7 +12,6 @@ import catching3 from "../../../public/catching3.jpeg";
 import release1 from "../../../public/release1.jpeg";
 import release2 from "../../../public/release2.jpeg";
 import release3 from "../../../public/release3.jpeg";
-import SurveyFeature from "@/components/SurveyFeature";
 
 export default function PopulationManagement() {
   return (
@@ -58,12 +57,6 @@ export default function PopulationManagement() {
           <p><strong>Transparency:</strong> Maintaining clear and accessible records for accountability and public trust.</p>
         `}
         multi={true}
-      />
-      <SurveyFeature
-      imageSrc={catching3}
-        description={`
-          <p><strong>Our commitment ensures that every animal is treated with compassion and respect throughout the process.<strong></p>
-        `}
       />
       <Footer />
     </div>

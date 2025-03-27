@@ -1,8 +1,12 @@
 import Image from "next/image";
 import videoSection from '../../public/videoSection.jpg';
+import dataReviewImg2 from "../../public/dataReview2.jpeg";
+import mobile1 from "../../public/mobile1.jpeg";
+import mobile2 from "../../public/mobile2.jpeg";
+import mobile3 from "../../public/mobile3.jpeg";
 import { motion } from "framer-motion";
 
-export default function surveyFeature({description, imageSrc}) {
+export default function surveyFeature({description}) {
      return (
           <motion.section
                initial={{ opacity: 0 }}
@@ -29,8 +33,11 @@ export default function surveyFeature({description, imageSrc}) {
                               viewport={{ once: true, amount: 0.3 }}
                               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }} className="mt-10 flex justify-center"
                          >
-                              <div className="rounded-4xl overflow-hidden relative w-auto max-h-[40rem]">
-                                   <Image src={imageSrc} alt="Video Thumbnail" className="w-full h-[80%] sm:h-[70%] md:h-[70%] lg:h-[124%] object-contain" />
+                              <div className="rounded-4xl overflow-hidden relative max-h-[40rem] flex gap-10">
+                                   <Image src={dataReviewImg2} alt="Video Thumbnail" className="hidden lg:block w-full h-[80%] sm:h-[70%] md:h-[70%] lg:h-[110%] object-contain" />
+                                   <Image src={mobile1} alt="Video Thumbnail" className="hidden lg:block w-full h-[80%] sm:h-[70%] md:h-[70%] lg:h-[110%] object-contain" />
+                                   <Image src={mobile3} alt="Video Thumbnail" className="h-[80%] w-full sm:h-[70%] md:h-[70%] lg:h-[110%] object-contain" />
+                                   <Image src={mobile2} alt="Video Thumbnail" className="hidden lg:block h-[80%] sm:h-[70%] md:h-[70%] lg:h-[110%] object-contain" />
                               </div>
                          </motion.div>
                     </motion.div>
