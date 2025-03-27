@@ -9,7 +9,6 @@ import hero2 from '../../../public/hero2.jpg'
 import geofencing from "../../../public/geofencing.jpg";
 import dataReviewImg from "../../../public/dataReview.jpeg";
 import dataReviewImg2 from "../../../public/dataReview2.jpeg";
-import mobile from '../../../public/mobile.jpeg';
 
 export default function MassVaccination() {
   return (
@@ -53,7 +52,6 @@ export default function MassVaccination() {
         multi={false}       
       />
       <SurveyFeature 
-      imageSrc={mobile}
       description={`
         <p><strong>Together, we are fostering safer environments for both animals and communities.</strong></p>
       `}
