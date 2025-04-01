@@ -33,9 +33,8 @@ export default function Hero() {
                 alt="Logo"
                 className="w-20 sm:w-36 h-auto md:w-38 lg:w-70 -mb-5 lg:-mb-10 -ml3 sm:-ml-4 md:-ml-6 lg:-ml-12"
               />
-              <span className="sm:text-lg md:text-3xl lg:text-6xl font-semibold text-center block mt-6 md:-ml-4 lg:-ml-8">
-                Humane World <br />
-                <span className="block mx-auto">Apps</span>
+              <span className="text-sm sm:text-lg md:text-3xl lg:text-6xl font-semibold text-center block mt-6 md:-ml-4 lg:-ml-8 max-w-[2rem] md:max-w-[4rem] lg:max-w-[7rem]">
+                Humane World Apps
               </span>
             </div>
           </motion.h2>

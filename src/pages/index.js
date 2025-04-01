@@ -11,11 +11,13 @@ import VideoSection from "@/components/VideoSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import mission from "../../public/LindaPataRat.png";
 import hero2 from "../../public/LindaPataRat1.png";
+import FirstTimeModal from "@/components/FirstTimeModal";
 
 export default function Home() {
   return (
     <>
       <Header />
+    <FirstTimeModal />
       <Hero1 />
       <Carousel />
       <CampaignSection />

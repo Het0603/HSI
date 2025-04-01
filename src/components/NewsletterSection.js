@@ -10,20 +10,18 @@ import { useState } from "react";
 export default function NewsletterSection() {
      const [email, setEmail] = useState("");
      const [firstName, setFirstName] = useState("");
-     const [zipCode, setZipCode] = useState("");
+     const [lastName, setLastName] = useState("");
      const [mobile, setMobile] = useState("");
+     const [city, setCity] = useState("");
+     const [country, setCountry] = useState("");
      const [isRobot, setIsRobot] = useState(false);
      const [error, setError] = useState("");
 
      const handleSubmit = (e) => {
           e.preventDefault();
 
-          if (!email || !firstName || !zipCode || !isRobot) {
+          if (!email || !firstName || !lastName || !isRobot || !city || !country) {
                setError("Please fill out all required fields and confirm you're not a robot.");
-               return;
-          }
-          if (!/^\d+$/.test(zipCode)) {
-               setError("Zip code should only contain numbers.");
                return;
           }
 
@@ -31,16 +29,20 @@ export default function NewsletterSection() {
           const formData = {
                email,
                firstName,
-               zipCode,
+               lastName,
                mobile,
+               city,
+               country
           };
           localStorage.setItem("newsletterData", JSON.stringify(formData));
 
           // Optionally, clear form fields
           setEmail("");
           setFirstName("");
-          setZipCode("");
+          setLastName("");
           setMobile("");
+          setCity("");
+          setCountry("");
           setIsRobot(false);
           setError("");
           alert("Thank you for subscribing!");
@@ -51,7 +53,7 @@ export default function NewsletterSection() {
                initial={{ opacity: 0, y: 50 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true, amount: 0.3 }}
-               transition={{ duration: 0.8, ease: "easeOut" }} className="bg-[#00352C] py-16 px-6 md:px-16 lg:px-24">
+               transition={{ duration: 0.8, ease: "easeOut" }} id="aboutUs" className="bg-[#00352C] py-16 px-6 md:px-16 lg:px-24">
                <div className=" mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-24">
 
                     <motion.div
@@ -59,7 +61,7 @@ export default function NewsletterSection() {
                          whileInView={{ opacity: 1, x: 0 }}
                          viewport={{ once: true, amount: 0.3 }}
                          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="text-white w-full md:w-1/2">
-                         <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-6">Humane World for Animals</h2>
+                         <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-6">Humane World Apps</h2>
                          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-5 w-full w-125">
                               {[dog1, dog2, dog3, dog4].map((dog, index) => (
                                    <motion.div
@@ -87,7 +89,7 @@ export default function NewsletterSection() {
                          whileInView={{ opacity: 1, x: 0 }}
                          viewport={{ once: true, amount: 0.3 }}
                          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} className="w-full md:w-1/2 bg-[#f8f8f8] rounded-3xl shadow-lg p-6 md:p-8">
-                         <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#00352C]">Keep me up to date!</h3>
+                         <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#00352C]">Enroll now for the App Access</h3>
                          <p className="text-[#474747] mt-2 sm:text-lg md:text-xl max-w-full md:max-w-[25rem]">Get the latest news and quick, simple actions you can take to help animals each week</p>
 
                          {error && <p className="text-red-600 mt-4">{error}</p>}
@@ -112,12 +114,33 @@ export default function NewsletterSection() {
                                         />
                                    </div>
                                    <div>
-                                        <label className="block font-medium text-gray-700">Zip code</label>
+                                        <label className="block font-medium text-gray-700">Last name</label>
                                         <input
                                              type="text"
                                              className="mt-1 w-full p-2 border border-[#989494] rounded-lg"
-                                             value={zipCode}
-                                             onChange={(e) => setZipCode(e.target.value)}
+                                             value={lastName}
+                                             onChange={(e) => setLastName(e.target.value)}
+                                        />
+                                   </div>
+                              </div>
+
+                              <div className="grid grid-cols-2 gap-4 mt-4">
+                                   <div>
+                                        <label className="block font-medium text-gray-700">City</label>
+                                        <input
+                                             type="text"
+                                             className="mt-1 w-full p-2 border border-[#989494] rounded-lg"
+                                             value={city}
+                                             onChange={(e) => setCity(e.target.value)}
+                                        />
+                                   </div>
+                                   <div>
+                                        <label className="block font-medium text-gray-700">Country</label>
+                                        <input
+                                             type="text"
+                                             className="mt-1 w-full p-2 border border-[#989494] rounded-lg"
+                                             value={country}
+                                             onChange={(e) => setCountry(e.target.value)}
                                         />
                                    </div>
                               </div>
@@ -150,7 +173,7 @@ export default function NewsletterSection() {
                                    By providing your mobile number, you agree to receive periodic text messages from Humane World for Animals with updates and ways you can help animals. Msg & data rates may apply. Text STOP to 77879 to opt out, HELP for info. <a href="#" className="text-[#00352C] font-medium">Privacy Policy, Terms & Conditions</a>.
                               </p>
 
-                              <button type="submit" className="mt-6 w-full bg-[#009CEB] hover:bg-blue-600 text-white py-3 rounded-lg font-bold">Get Email Alerts</button>
+                              <button type="submit" className="mt-6 w-full bg-[#009CEB] hover:bg-blue-600 text-white py-3 rounded-lg font-bold">Enroll Now</button>
                          </form>
                     </motion.div>
 

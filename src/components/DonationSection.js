@@ -81,24 +81,6 @@ export default function DonationSection() {
             <CounterBox key={index} title={stat.title} target={stat.target} />
           ))}
         </div>
-        <div className="flex gap-4">
-          <motion.button
-            onClick={() => router.push('/')}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }} className="mt-6 bg-[#00352C] px-5 sm:px-6 py-2 rounded-lg text-white text-base sm:text-lg font-semibold shadow-lg">
-            Learn More
-          </motion.button>
-          <motion.button
-            onClick={() => router.push('/')}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }} className="mt-6 bg-[#00352C] px-5 sm:px-6 py-2 rounded-lg text-white text-base sm:text-lg font-semibold shadow-lg">
-            Support Our Mission
-          </motion.button>
-        </div>
       </motion.div>
     </motion.section>
   );

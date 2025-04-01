@@ -4,7 +4,7 @@ import Hero from "@/components/Hero2";
 import Geofencing from "@/components/Geofencing";
 import DataReview from "@/components/DataReview";
 import DataReview2 from "@/components/DataReview2";
-import hero2 from '../../../public/hero2.jpg'
+import hero4 from '../../../public/hero4.jpg'
 import HealthClinicImg from "../../../public/healthClinic.jpg";
 import healthClinicImg1 from "../../../public/healthClinicImg1.jpeg";
 import healthClinicImg2 from "../../../public/healthClinicImg2.jpeg";
@@ -14,7 +14,7 @@ export default function HealthClinic() {
     <div>
       <Header />
       <Hero
-        imageSrc={hero2}
+        imageSrc={hero4}
         title="Health Clinic"
         subHeader='Delivering Essential Medical Care to Community Animals'
         description="The Health Clinic Program is dedicated to enhancing the well-being of animals through routine and emergency medical care. Supported by Humane World Apps, our field teams conduct community-based veterinary interventions, ensuring that all animals receive the care they need." 
