@@ -196,11 +196,6 @@ export default function Carousel() {
                          </div>
                     ))}
                </Slider>
-               {/* <div className="flex justify-center text-center mt-4">
-                    <button className="bg-[#00352C] text-center block text-white px-5 py-2 rounded">
-                         View all →
-                    </button>
-               </div> */}
 
                {selectedApp && (
                     <motion.div
