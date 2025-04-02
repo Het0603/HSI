@@ -133,16 +133,6 @@ export default function BlogSection() {
                          </motion.div>
                     ))}
                </div>
-
-               <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }} className="flex justify-center text-center mt-12">
-                    <button className="bg-[#00352C] hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg flex items-center justify-center gap-2">
-                         Read the blog →
-                    </button>
-               </motion.div>
           </motion.section>
      );
 };

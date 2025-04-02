@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 
 export default function missionSection({ title, subtitle, description, url, buttonText, imageSrc, bgColor, alignment, textColor, headingColor, buttonBgColor, imageMargin }) {
   const router = useRouter();
-  const defaultButtonBgColor = "#009CEB";
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -26,8 +25,8 @@ export default function missionSection({ title, subtitle, description, url, butt
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.4, delay: 0.4 }} onClick={() => router.push(url)} className={`mt-6 px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl`}
-            style={{ backgroundColor: buttonBgColor || defaultButtonBgColor}}>
+            transition={{ duration: 0.4, delay: 0.4 }} onClick={() => router.push(url)} className={`${buttonBgColor} mt-6 px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl`}
+            >
             {buttonText}
           </motion.button>
         </motion.div>

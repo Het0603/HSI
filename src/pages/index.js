@@ -33,7 +33,7 @@ export default function Home() {
         alignment="md:flex-row-reverse"
         textColor="text-black"
         headingColor="text-[#00352C]"
-        buttonBgColor="#00352C"
+        buttonBgColor="bg-[#00352C] transition duration-300 ease-in-out transform hover:bg-white hover:text-[#00352C] border border-[#00352C]"
         url={'https://www.humaneworld.org/en/about-us/our-history'}
       />
       <MissionSection
@@ -48,6 +48,7 @@ export default function Home() {
         textColor="text-white"
         headingColor="text-[#5EC9FF]"
         imageMargin="ml-auto"
+        buttonBgColor="bg-[#009CEB] transition duration-300 ease-in-out transform hover:bg-white hover:text-[#009CEB] border border-[#009CEB]"
         url={'https://www.humaneworld.org/en/our-mission-and-impact'}
       />
       <VideoSection />

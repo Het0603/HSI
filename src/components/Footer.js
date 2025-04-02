@@ -12,7 +12,7 @@ export default function Footer() {
     <motion.footer
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }} className="bg-[#f8f8f8] border-gray-200">
+      transition={{ duration: 1 }} className="bg-white border-gray-200">
       <div className="md:px-16 lg:px-24 mx-auto py-4 md:py-6 lg:py-12 px-6 flex flex-col md:flex-row md:justify-between md:items-center space-y-6 md:space-y-0">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -30,7 +30,7 @@ export default function Footer() {
             to the extent permitted by law. The Humane World
             for Animals tax identification number is 53-0225390.</p>
           <motion.div
-            className="flex gap-4 justify-between w-full"
+            className="flex gap-4 justify-between w-full items-center max-w-[25rem]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }} >

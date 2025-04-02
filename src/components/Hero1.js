@@ -52,7 +52,7 @@ export default function Hero() {
           </motion.p>
 
           <button onClick={() => router.push('https://hsapps-rebranding.pages.dev/')}
-            className="w-full sm:w-[12%] mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl"
+            className="w-full sm:w-[12%] mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white hover:text-[#009CEB] text-base sm:text-lg md:text-xl transition hover:bg-white border-[#009CEB] border transform duration-300 ease-in-out"
           >
             Login
           </button>
