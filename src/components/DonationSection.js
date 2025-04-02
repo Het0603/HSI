@@ -1,8 +1,8 @@
 import Image from "next/image";
 import donation from '../../public/donation.jpg';
 import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useRouter } from "next/router";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import axios from "axios";
 
 const CounterBox = ({ title, target }) => {
   const ref = useRef(null);
@@ -36,13 +36,28 @@ const CounterBox = ({ title, target }) => {
 };
 
 export default function DonationSection() {
-  const router = useRouter();
+  const [data, setData] = useState({});
+
   const stats = [
-    { title: "Animals Vaccinated", target: 50000 },
-    { title: "Animals Sterilized", target: 30000 },
-    { title: "Field Campaigns", target: 800 },
-    { title: "Active Partner Organizations", target: 10 },
+    { title: "Animals Vaccinated", target: data.total_vaccinations || 0 },
+    { title: "Animals Sterilized", target: data.total_sterilizations || 0 },
+    { title: "Field Campaigns", target: data.total_areas || 0 },
+    { title: "Active Partner Organizations", target: data.total_organisations || 0 },
   ];
+
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const response = await axios.get('/api/stats');
+        setData(response.data)
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchStats();
+  }, []);
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
