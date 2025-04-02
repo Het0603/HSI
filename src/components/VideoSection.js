@@ -2,7 +2,7 @@ import videoSection from '../../public/videoSection.jpg';
 import { motion } from "framer-motion";
 
 export default function VideoSection() {
-     const videoUrl = "https://www.youtube.com/embed/CKUC2K9d6sw";
+     const videoUrl = "https://www.youtube.com/embed/D2RoEze3gPw?si=Zh10f5n0JCOd22SQ";
      return (
           <motion.section
                initial={{ opacity: 0, y: 50 }}

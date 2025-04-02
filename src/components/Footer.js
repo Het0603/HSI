@@ -2,12 +2,12 @@ import Image from "next/image";
 import logo from "../../public/logo.svg";
 import instagram from "../../public/instagram.svg";
 import youtube from "../../public/youtube.svg";
+import facebook from "../../public/facebook.svg";
+import twitter from "../../public/xIcon.svg";
 import { motion } from "framer-motion";
 import logo2 from "../../public/mobileAppLogoGreen1.png";
-import { useRouter } from "next/router";
 
 export default function Footer() {
-  const router = useRouter();
   return (
     <motion.footer
       initial={{ opacity: 0 }}
@@ -17,8 +17,8 @@ export default function Footer() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }} className="flex items-center space-x-4 flex-col items-start space-y-5">
-          <div className="flex flex rows items-center">
+          transition={{ duration: 1, ease: "easeOut" }} className="flex space-x-4 flex-col items-start space-y-5">
+          <div className="flex rows items-center">
             <Image src={logo} alt="Logo" style={{ width: 200, height: 100 }} />
             <div className="w-[2px] h-15 md:h-25 bg-gray-500 mx-4"></div>
             <Image src={logo2} width={160} height={60} alt="Logo" className="w-16 sm:w-18 h-auto md:w-20 lg:w-20" />
@@ -35,10 +35,12 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }} >
             <div className="flex gap-4">
-              <a onClick={() => router.push('https://www.instagram.com/humaneworldforanimals/')} className="cursor-pointer"><Image src={instagram} alt="Instagram" /></a>
-              <a onClick={() => router.push('www.youtube.com/@HumaneWorldApps')} className="cursor-pointer"><Image src={youtube} alt="Youtube" /></a>
+              <a href="https://www.youtube.com/@humaneworldforanimals" target="_blank" rel="noopener noreferrer" className="cursor-pointer"><Image src={youtube} alt="Youtube" /></a>
+              <a href="https://www.instagram.com/humaneworldforanimals/" target="_blank" rel="noopener noreferrer" className="cursor-pointer"><Image src={instagram} alt="Instagram" /></a>
+              <a href="https://www.facebook.com/HumaneWorldforAnimals/" target="_blank" rel="noopener noreferrer" className="cursor-pointer"><Image src={facebook} alt="Facebook" /></a>
+              <a href="https://x.com/humaneworldorg" target="_blank" rel="noopener noreferrer" className="cursor-pointer"><Image src={twitter} alt="Twitter" /></a>
             </div>
-            <a href="#" className="hover:text-[#009CEB] transition sm:text-lg md:text-xl">Privacy and Cookie Policy</a>
+            <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-[#009CEB] transition sm:text-lg md:text-xl">Privacy and Cookie Policy</a>
           </motion.div>
         </motion.div>
 
@@ -46,8 +48,8 @@ export default function Footer() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.7 }} className="md:flex flex-col text-center items-center space-y-4 hidden">
-          <button onClick={() => router.push('https://donate.humaneworld.org/page/160655/donate/1?ea.tracking.id=web_topnav')} className="border-[#009CEB] border-2 md:text-lg lg:text-2xl font-semibold text-[#009CEB] md:px-2 lg:px-4 py-3 rounded-lg transition duration-300 ease-in-out transform hover:bg-[#009CEB] hover:text-white hover:scale-100 md:w-[8rem] lg:w-[13rem]">Donate</button>
-          <button onClick={() => router.push('https://www.humaneworld.org/en/contact-us')} className="bg-[#00352C] md:text-lg lg:text-2xl font-semibold text-white md:px-2 lg:px-4 py-3 rounded-lg transition duration-300 ease-in-out transform hover:bg-[#006C4D] hover:scale-100 md:w-[8rem] lg:w-[13rem]">Contact Us</button>
+          <a href="https://donate.humaneworld.org/page/160655/donate/1?ea.tracking.id=web_topnav" target="_blank" rel="noopener noreferrer" className="border-[#009CEB] border-2 md:text-lg lg:text-2xl font-semibold text-[#009CEB] md:px-2 lg:px-4 py-3 rounded-lg transition duration-300 ease-in-out transform hover:bg-[#009CEB] hover:text-white hover:scale-100 md:w-[8rem] lg:w-[13rem]">Donate</a>
+          <a href="https://www.humaneworld.org/en/contact-us" target="_blank" rel="noopener noreferrer" className="bg-[#00352C] md:text-lg lg:text-2xl font-semibold text-white md:px-2 lg:px-4 py-3 rounded-lg transition duration-300 ease-in-out transform hover:bg-[#006C4D] hover:scale-100 md:w-[8rem] lg:w-[13rem]">Contact Us</a>
         </motion.div>
       </div>
 

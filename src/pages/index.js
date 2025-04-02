@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Header />
-    <FirstTimeModal />
+      <FirstTimeModal />
       <Hero1 />
       <Carousel />
       <CampaignSection />
@@ -34,6 +34,7 @@ export default function Home() {
         textColor="text-black"
         headingColor="text-[#00352C]"
         buttonBgColor="#00352C"
+        url={'https://www.humaneworld.org/en/about-us/our-history'}
       />
       <MissionSection
         title="Bold work, global mission"
@@ -47,6 +48,7 @@ export default function Home() {
         textColor="text-white"
         headingColor="text-[#5EC9FF]"
         imageMargin="ml-auto"
+        url={'https://www.humaneworld.org/en/our-mission-and-impact'}
       />
       <VideoSection />
       <BlogSection />
