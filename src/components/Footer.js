@@ -5,7 +5,6 @@ import youtube from "../../public/youtube.svg";
 import facebook from "../../public/facebook.svg";
 import twitter from "../../public/xIcon.svg";
 import { motion } from "framer-motion";
-import logo2 from "../../public/mobileAppLogoGreen1.png";
 
 export default function Footer() {
   return (
@@ -21,8 +20,7 @@ export default function Footer() {
           <div className="flex rows items-center">
             <Image src={logo} alt="Logo" style={{ width: 200, height: 100 }} />
             <div className="w-[2px] h-15 md:h-25 bg-gray-500 mx-4"></div>
-            <Image src={logo2} width={160} height={60} alt="Logo" className="w-16 sm:w-18 h-auto md:w-20 lg:w-20" />
-            <span className=" text-xl sm:text-xl md:text-xl lg:text-2xl font-bold text-gray-900 w-[2rem] sm:w-[2rem] md:w-[4rem] lg:w-[8rem] ml-2 leading-[1.5rem]">Humane World Apps</span>
+            <span className=" text-xl sm:text-xl md:text-xl lg:text-2xl font-bold text-[#00352C]">Humane World Apps</span>
           </div>
           <p className="text-black sm:text-lg max-w-[26rem]">Humane World for Animals is registered as
             a 501(c)(3) nonprofit organization. Contributions

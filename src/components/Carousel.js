@@ -151,8 +151,7 @@ export default function Carousel() {
                                              initial="hidden"
                                              animate="visible"
                                              custom={index}
-                                             className="text-xl font-medium pb-3 text-[#00352C] text-center"
-                                             style={{ fontFamily: "SharpGrotesk" }}
+                                             className="text-xl font-bold pb-3 text-[#00352C] text-center"
                                         >
                                              {app.title}
                                         </motion.h2>

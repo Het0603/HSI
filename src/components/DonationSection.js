@@ -39,10 +39,10 @@ export default function DonationSection() {
   const [data, setData] = useState({});
 
   const stats = [
-    { title: "Animals Vaccinated", target: data.total_vaccinations || 0 },
-    { title: "Animals Sterilized", target: data.total_sterilizations || 0 },
-    { title: "Field Campaigns", target: data.total_areas || 0 },
-    { title: "Active Partner Organizations", target: data.total_organisations || 0 },
+    { title: "Animals vaccinated", target: data.total_vaccinations || 0 },
+    { title: "Animals sterilized", target: data.total_sterilizations || 0 },
+    { title: "Field campaigns", target: data.total_areas || 0 },
+    { title: "Active partner organizations", target: data.total_organisations || 0 },
   ];
 
   useEffect(() => {
@@ -89,7 +89,7 @@ export default function DonationSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }} style={{ fontFamily: "SharpGrotesk" }} className="text-2xl md:text-4xl lg:text-5xl font-bold max-w-[42rem]">
-          Humane World Apps Impact So Far
+          Humane World Apps impact so far
         </motion.h2>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:w-full">
           {stats.map((stat, index) => (

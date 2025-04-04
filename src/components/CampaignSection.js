@@ -16,7 +16,7 @@ const campaignAreas = [
   { id: 3, image: SouthAfrica, location: "South Africa" },
   { id: 4, image: India, location: "India" },
   { id: 5, image: CostaRica, location: "Costa Rica" },
-  { id: 6, image: Vietnam, location: "Vietnam" },
+  { id: 6, image: Vietnam, location: "Viet Nam" },
 ];
 
 export default function CampaignSection() {
@@ -56,7 +56,7 @@ export default function CampaignSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }} style={{ fontFamily: "SharpGrotesk" }} className="text-[#00352C] text-3xl sm:text-4xl md:text-5xl font-bold mb-8">
-        Programs Using Humane World Apps
+        Programs using Humane World Apps
       </motion.h2>
 
       <motion.div
