@@ -10,15 +10,14 @@ export default function VideoSection() {
                viewport={{ once: true, amount: 0.3 }}
                transition={{ duration: 0.8, ease: "easeOut" }} className="bg-[#f8f8f8] h-[30rem] sm:h-[33rem] md:h-[45rem] lg:h-[50rem]"
           >
-               <div className="relative py-12 px-6 sm:px-12 md:px-16 lg:px-24 h-110 md:h-160 object-cover bg-cover bg-center" style={{ backgroundImage: `url(${videoSection.src})` }}>
-                    <div className="absolute inset-0 bg-[#009CEB] opacity-70"></div>
+               <div className="relative py-12 px-6 sm:px-12 md:px-16 lg:px-24 h-110 md:h-160 object-cover bg-cover bg-center bg-[#F3EFEA]">
 
                     <motion.div
                          initial={{ opacity: 0, y: 30 }}
                          whileInView={{ opacity: 1, y: 0 }}
                          viewport={{ once: true, amount: 0.3 }}
-                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="relative text-center text-white top-10">
-                         <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold">Creating a humane society</h2>
+                         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="relative text-center top-10">
+                         <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#00352C]">Creating a humane world</h2>
                          <p className="mt-7 text-lg md:text-2xl">Over 1 million dogs and cats vaccinated and over 150,000 sterilized since 2013.</p>
 
                          <motion.div

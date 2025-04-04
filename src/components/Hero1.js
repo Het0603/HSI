@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import hero1 from "../../public/hero1.jpg";
 import imageCut from "../../public/imageCut.svg";
 import { useRouter } from "next/router";
-import logo2 from "../../public/mobileAppLogoWhite.png";
 
 export default function Hero() {
   const router = useRouter();
@@ -26,14 +25,7 @@ export default function Hero() {
             className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold max-w-[50rem]"
           >
             <div className="flex items-center space-x-2">
-              <Image
-                src={logo2}
-                width={80}
-                height={10}
-                alt="Logo"
-                className="w-20 sm:w-36 h-auto md:w-38 lg:w-70 -mb-5 lg:-mb-10 -ml3 sm:-ml-4 md:-ml-6 lg:-ml-12"
-              />
-              <span className="text-sm sm:text-lg md:text-3xl lg:text-6xl font-semibold text-center block mt-6 md:-ml-4 lg:-ml-8 max-w-[2rem] md:max-w-[4rem] lg:max-w-[7rem]">
+              <span className="text-xl sm:text-xl md:text-3xl lg:text-6xl font-semibold text-center block mt-6">
                 Humane World Apps
               </span>
             </div>
@@ -45,14 +37,14 @@ export default function Hero() {
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
             className="mt-2 lg:mt-4 text-lg sm:text-xl md:text-2xl max-w-[38rem]"
           >
-            <span className="lg:text-4xl">Empowering Animal Welfare Through Technology Driven Innovation</span>
+            <span className="lg:text-4xl">Advancing animal welfare through technology-driven innovation.</span>
             <br />
             <br />
             From field to clinic, our digital ecosystem drives impactful change in the lives of animals — one vaccination, one rescue, one treatment at a time.
           </motion.p>
 
-          <button onClick={() => router.push('https://hsapps-rebranding.pages.dev/')}
-            className="w-full sm:w-[12%] mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white hover:text-[#009CEB] text-base sm:text-lg md:text-xl transition hover:bg-white border-[#009CEB] border transform duration-300 ease-in-out"
+          <button onClick={() => router.push('https://hsapps-rebranding.pages.dev/')} style={{ fontFamily: "Noto Sans" }}
+            className="w-full sm:w-[12%] mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl font-medium text-white hover:text-[#009CEB] text-base sm:text-lg md:text-xl transition hover:bg-white border-[#009CEB] border transform duration-300 ease-in-out"
           >
             Login
           </button>

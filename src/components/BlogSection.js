@@ -68,7 +68,7 @@ export default function BlogSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} style={{ fontFamily: "SharpGrotesk" }} className="text-[#00352C] text-3xl sm:text-4xl md:text-5xl font-bold mb-8">
-                    A Humane World Blog
+                    A Humane World blog
                </motion.h2>
 
                <div className="relative block sm:hidden">
@@ -96,7 +96,7 @@ export default function BlogSection() {
                                              {blog.title}
                                         </h3>
                                         <p className="text-[#1A5CC7] md:text-lg mt-1">{blog.description}</p>
-                                        <p className="text-[#616060] mt-2 text-sm sm:text-base">{blog.content}</p>
+                                        <p className="text-black mt-2 text-sm sm:text-base">{blog.content}</p>
                                    </div>
                               </motion.div>
                          ))}
@@ -128,11 +128,21 @@ export default function BlogSection() {
                                         {blog.title}
                                    </h3>
                                    <p className="text-[#1A5CC7] text-lg mt-1">{blog.description}</p>
-                                   <p className="text-[#616060] mt-2 text-sm sm:text-base">{blog.content}</p>
+                                   <p className="text-black mt-2 text-sm sm:text-base">{blog.content}</p>
                               </div>
                          </motion.div>
                     ))}
                </div>
+
+               <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }} className="flex justify-center text-center mt-12">
+                    <button className="bg-[#00352C] hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg flex items-center justify-center gap-2">
+                         Read the Blog
+                    </button>
+               </motion.div>
           </motion.section>
      );
 };
