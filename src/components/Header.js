@@ -42,7 +42,7 @@ export default function Header() {
         <Link href="/" className="flex items-center pl-5 lg:pl-0">
           <Image src={logo} width={160} height={60} alt="Logo" className="w-26 h-auto sm:w-25 md:w-38 lg:w-62" />
         </Link>
-        <div className="w-[1px] h-8 md:h-14 bg-gray-500 mx-2"></div>
+        <div className="w-[1px] h-8 md:h-14 bg-gray-500 lg:mx-6"></div>
         <Link href="/" className="flex items-center">
           <span className=" text-xs md:text-xs lg:text-xl font-bold text-[#00352C] w-[8rem] sm:w-[8rem] md:w-[8rem] lg:w-[14rem] ml-2">Humane World Apps</span>
         </Link>

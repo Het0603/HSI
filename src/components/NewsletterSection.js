@@ -3,49 +3,58 @@ import dog1 from '../../public/dog1.jpg';
 import dog2 from '../../public/dog2.jpg';
 import dog3 from '../../public/dog3.jpg';
 import dog4 from '../../public/dog4.jpg';
-import recaptcha from '../../public/recaptcha.png';
 import { motion } from "framer-motion";
 import { useState } from "react";
+import axios from "axios";
 
 export default function NewsletterSection() {
      const [email, setEmail] = useState("");
+     const [orgName, setOrgName] = useState("");
      const [firstName, setFirstName] = useState("");
      const [lastName, setLastName] = useState("");
      const [mobile, setMobile] = useState("");
      const [city, setCity] = useState("");
      const [country, setCountry] = useState("");
-     const [isRobot, setIsRobot] = useState(false);
      const [error, setError] = useState("");
+     const [successMessage, setSuccessMessage] = useState("");
 
-     const handleSubmit = (e) => {
+     const handleSubmit = async (e) => {
           e.preventDefault();
 
-          if (!email || !firstName || !lastName || !isRobot || !city || !country) {
-               setError("Please fill out all required fields and confirm you're not a robot.");
+          if (!email || !orgName || !city || !country) {
+               let errorMessage = "Please fill out the required fields: ";
+               if (!email) errorMessage += "Email, ";
+               if (!orgName) errorMessage += "Organization name, ";
+               if (!city) errorMessage += "City, ";
+               if (!country) errorMessage += "Country.";
+               setError(errorMessage);
                return;
           }
 
-          // Store the data in localStorage
-          const formData = {
-               email,
-               firstName,
-               lastName,
-               mobile,
-               city,
-               country
-          };
-          localStorage.setItem("newsletterData", JSON.stringify(formData));
+          try {
+               await axios.post('/api/enroll', {
+                    email,
+                    orgName,
+                    firstName,
+                    lastName,
+                    city,
+                    country,
+                    mobile,
+               });
 
-          // Optionally, clear form fields
-          setEmail("");
-          setFirstName("");
-          setLastName("");
-          setMobile("");
-          setCity("");
-          setCountry("");
-          setIsRobot(false);
-          setError("");
-          alert("Thank you for subscribing!");
+               setSuccessMessage("Thank you for subscribing!");
+               setError("");
+
+               setEmail("");
+               setOrgName("");
+               setFirstName("");
+               setLastName("");
+               setCity("");
+               setCountry("");
+               setMobile("");
+          } catch (error) {
+               setError("Something went wrong. Please try again later.");
+          }
      };
 
      return (
@@ -93,6 +102,7 @@ export default function NewsletterSection() {
                          <p className="text-[#474747] mt-2 sm:text-lg md:text-xl max-w-full md:max-w-[25rem]">Get the latest news and quick, simple actions you can take to help animals each week</p>
 
                          {error && <p className="text-red-600 mt-4">{error}</p>}
+                         {successMessage && <p className="text-green-600 mt-4">{successMessage}</p>}
 
                          <form onSubmit={handleSubmit} className="mt-6">
                               <label className="block font-medium text-gray-700">Email Address*</label>
@@ -101,6 +111,14 @@ export default function NewsletterSection() {
                                    className="mt-1 w-full p-2 border border-[#989494] rounded-lg"
                                    value={email}
                                    onChange={(e) => setEmail(e.target.value)}
+                              />
+
+                              <label className="block font-medium text-gray-700 mt-4">Organisation name*</label>
+                              <input
+                                   type="text"
+                                   className="mt-1 w-full p-2 border border-[#989494] rounded-lg"
+                                   value={orgName}
+                                   onChange={(e) => setOrgName(e.target.value)}
                               />
 
                               <div className="grid grid-cols-2 gap-4 mt-4">
@@ -126,7 +144,7 @@ export default function NewsletterSection() {
 
                               <div className="grid grid-cols-2 gap-4 mt-4">
                                    <div>
-                                        <label className="block font-medium text-gray-700">City</label>
+                                        <label className="block font-medium text-gray-700">City*</label>
                                         <input
                                              type="text"
                                              className="mt-1 w-full p-2 border border-[#989494] rounded-lg"
@@ -135,7 +153,7 @@ export default function NewsletterSection() {
                                         />
                                    </div>
                                    <div>
-                                        <label className="block font-medium text-gray-700">Country</label>
+                                        <label className="block font-medium text-gray-700">Country*</label>
                                         <input
                                              type="text"
                                              className="mt-1 w-full p-2 border border-[#989494] rounded-lg"
@@ -153,24 +171,8 @@ export default function NewsletterSection() {
                                    onChange={(e) => setMobile(e.target.value)}
                               />
 
-                              <div className="mt-4 flex items-center gap-4 bg-[#FAFAFA] p-3 rounded-lg w-[18rem] justify-between">
-                                   <div className="flex items-center gap-4">
-                                        <input
-                                             type="checkbox"
-                                             checked={isRobot}
-                                             onChange={(e) => setIsRobot(e.target.checked)}
-                                             style={{ width: 27, height: 25 }}
-                                        />
-                                        <span className="text-sm">I’m not a robot</span>
-                                   </div>
-                                   <div className="flex flex-col items-center">
-                                        <Image src={recaptcha} alt="reCAPTCHA" className="object-cover" style={{ width: 40, height: 47 }} />
-                                        <span className="text-xs">Privacy Terms</span>
-                                   </div>
-                              </div>
-
-                              <p className="text-sm text-[#3E3B3B] mt-4 max-w-[22rem]">
-                                   By providing your mobile number, you agree to receive periodic text messages from Humane World for Animals with updates and ways you can help animals. Msg & data rates may apply. Text STOP to 77879 to opt out, HELP for info. <a href="#" className="text-[#00352C] font-medium">Privacy Policy, Terms & Conditions</a>.
+                              <p className="text-sm text-[#3E3B3B] mt-4">
+                                   By providing your mobile number, you agree to receive periodic text messages from Humane World for Animals with updates and ways you can help animals. Msg & data rates may apply. Text STOP to 77879 to opt out, HELP for info. <a href="/privacy-policy" className="text-[#00352C] font-medium">Privacy Policy, Terms & Conditions</a>.
                               </p>
 
                               <button type="submit" className="mt-6 w-full bg-[#009CEB] hover:bg-blue-600 text-white py-3 rounded-lg font-bold">Enroll Now</button>
