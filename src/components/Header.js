@@ -4,7 +4,6 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import logo from "../../public/logo.svg";
 import { useRouter } from "next/router";
-import logo2 from "../../public/mobileAppLogoGreen1.png";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,27 +42,26 @@ export default function Header() {
         <Link href="/" className="flex items-center pl-5 lg:pl-0">
           <Image src={logo} width={160} height={60} alt="Logo" className="w-26 h-auto sm:w-25 md:w-38 lg:w-62" />
         </Link>
-        <div className="w-[1px] h-8 md:h-14 bg-gray-500 mx-2"></div>
+        <div className="w-[1px] h-8 md:h-14 bg-gray-500 lg:mx-6"></div>
         <Link href="/" className="flex items-center">
-          <Image src={logo2} width={160} height={60} alt="Logo" className="w-10 h-auto sm:w-10 md:w-13 lg:w-15" />
-          <span className=" text-xs md:text-xs lg:text-lg font-bold text-gray-900 w-[2rem] sm:w-[2rem] md:w-[4rem] lg:w-[6rem] ml-2 leading-[0.75rem] lg:leading-[1.3rem]">Humane World Apps</span>
+          <span className=" text-xs md:text-xs lg:text-xl font-bold text-[#00352C] w-[8rem] sm:w-[8rem] md:w-[8rem] lg:w-[14rem] ml-2">Humane World Apps</span>
         </Link>
 
-        <ul className="hidden lg:flex items-center space-x-6 text-gray-700 md:w-[100rem] md:justify-end pr-5">
-          <li><Link href="/" className="hover:text-blue-500 text-lg">Home</Link></li>
-          <li><a href="#" onClick={scrollToAboutUs} className="block hover:text-blue-500 px-5 text-lg">About us</a></li>
-          <li><Link href="/training-resources" className="hover:text-blue-500 text-lg">Training resources</Link></li>
+        <ul className="hidden lg:flex items-center space-x-6 text-[#00352c] font-medium md:w-[100rem] md:justify-end pr-5">
+          <li><Link href="/" className="hover:text-blue-500 text-xl">Home</Link></li>
+          <li><a href="#" onClick={scrollToAboutUs} className="block hover:text-blue-500 px-5 text-xl">About us</a></li>
+          <li><Link href="/training-resources" className="hover:text-blue-500 text-xl">Training resources</Link></li>
           <li
             className="relative group"
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
           >
-            <Link href="#" className="flex items-center gap-1 hover:text-blue-500 my-7 text-lg">Our programs <FaChevronDown size={14} /></Link>
+            <Link href="#" className="flex items-center gap-1 hover:text-blue-500 my-7 text-xl">Our programs <FaChevronDown size={14} /></Link>
             {dropdownOpen && (
-              <ul className="absolute top-full left-0 w-65 bg-white shadow-lg border rounded-md z-10">
-                <li><Link href="/mass-vaccination" className="block px-4 py-2 hover:rounded-md hover:bg-gray-100 text-lg">Mass-Vaccination</Link></li>
-                <li><Link href="/population-management" className="block px-4 py-2 hover:rounded-md hover:bg-gray-100 text-lg">Population-Management</Link></li>
-                <li><Link href="/health-clinic" className="block px-4 py-2 hover:rounded-md hover:bg-gray-100 text-lg">Health-Clinic</Link></li>
+              <ul className="absolute top-full left-0 w-70 bg-white shadow-lg border rounded-md z-10">
+                <li><Link href="/mass-vaccination" className="block px-4 py-2 hover:rounded-md hover:bg-gray-100 text-xl">Mass-Vaccination</Link></li>
+                <li><Link href="/population-management" className="block px-4 py-2 hover:rounded-md hover:bg-gray-100 text-xl">Population-Management</Link></li>
+                <li><Link href="/health-clinic" className="block px-4 py-2 hover:rounded-md hover:bg-gray-100 text-xl">Health-Clinic</Link></li>
               </ul>
             )}
           </li>
@@ -73,7 +71,7 @@ export default function Header() {
           <button onClick={toggleMenu} className="lg:hidden text-gray-700 focus:outline-none">
             {isOpen ? <FaTimes size={26} color="#009CEB" /> : <FaBars size={26} color="#009CEB" />}
           </button>
-          <button onClick={() => router.push('https://hsapps-rebranding.pages.dev/')} className="bg-[#E50913] hover:bg-green-800 text-white font-semibold px-6 py-5 sm:px-6 sm:py-2 md:px-6 md:py-2 text-sm sm:text-base md:text-lg sm:rounded-lg md:rounded-lg lg:rounded-lg shadow-lg">
+          <button onClick={() => router.push('https://hsapps-rebranding.pages.dev/')} className="bg-[#E50913] hover:bg-green-800 text-white font-semibold px-6 py-5 sm:px-6 sm:py-2 md:px-7 md:py-3 text-sm sm:text-base md:text-xl sm:rounded-lg md:rounded-lg lg:rounded-lg shadow-lg">
             Login
           </button>
         </div>

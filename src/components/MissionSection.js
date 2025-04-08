@@ -17,18 +17,18 @@ export default function missionSection({ title, subtitle, description, url, butt
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }} className="md:w-1/2 text-center md:text-left">
           <p className="text-[#FFC701] sm:text-lg font-semibold">{subtitle}</p>
-          <h2 className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl ${headingColor} font-bold mt-2`}>
+          <h2 className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl ${headingColor} font-bold mt-2`} style={{ fontFamily: "SharpGrotesk" }}>
             {title}
           </h2>
-          <div className={`mt-4 sm:text-lg leading-relaxed max-w-full ${textColor}`} dangerouslySetInnerHTML={{ __html: description }}></div>
-          <motion.button
+          <div className={`mt-4 sm:text-lg leading-relaxed max-w-full mb-8 ${textColor}`} dangerouslySetInnerHTML={{ __html: description }}></div>
+          <motion.a
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.4, delay: 0.4 }} onClick={() => router.push(url)} className={`${buttonBgColor} mt-6 px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl`}
+            transition={{ duration: 0.4, delay: 0.4 }} href={url} target="_blank" rel="noopener noreferrer" className={`${buttonBgColor} mt-6 px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl`}
             >
             {buttonText}
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         <div className="md:w-1/2">

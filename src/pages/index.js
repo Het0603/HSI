@@ -25,9 +25,9 @@ export default function Home() {
       <MissionSection
         title="Humane World for Animals"
         subtitle="Who We Are"
-        description={`formerly known as the Humane Society of the United States (HSUS) and Humane World Apps, we have been champions for animal welfare since 1954.<br>
-        Our mission is to confront and eliminate cruelty to animals worldwide, addressing issues ranging from factory farming and the fur trade to wildlife conservation and companion animal protection.`}
-        buttonText="Find out"
+        description={`For over 70 years, Humane World for Animals, formerly called the Humane Society of the United States and Humane Society International, has worked around the globe to tackle the root causes of animal cruelty and suffering to create permanent change.<br>
+        Driving toward the greatest global impact, we aim to achieve the vision behind our name: a more humane world.`}
+        buttonText="Find Out"
         imageSrc={hero2}
         bgColor="bg-[#f8f8f8]"
         alignment="md:flex-row-reverse"
@@ -39,9 +39,9 @@ export default function Home() {
       <MissionSection
         title="Bold work, global mission"
         subtitle="What We Do"
-        description={`For more than 70 years, Humane World for Animals — previously called the Humane Society of the United States and Humane Society International — has been a leader of the animal protection movement.<br>
-        Discover what we’re doing to stop animal cruelty and suffering for good.`}
-        buttonText="Find out"
+        description={`With millions of supporters and work happening in over 50 countries, we address the most deeply entrenched forms of animal cruelty and suffering by working on the biggest problems and creating long-term solutions for lasting change.<br>
+        As the leading voice in the animal protection space, we work to end the cruelest practices, care for animals in crisis and build a stronger animal protection movement. Together, we can end animal cruelty.`}
+        buttonText="Find Out"
         imageSrc={mission}
         bgColor="bg-[#00352C]"
         alignment="md:flex-row"
