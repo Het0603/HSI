@@ -56,7 +56,7 @@ export default function Footer() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }} className="text-center py-4 border-t border-gray-200 text-gray-600 sm:text-lg md:text-xl">
         <p>
-          © Copyright {new Date().getFullYear()} <a href="#" className="text-[#009CEB] font-semibold">Humane World for Animals</a>
+          © Copyright {new Date().getFullYear()} <a href="/" className="text-[#009CEB] font-semibold">Humane World for Animals</a>
         </p>
       </motion.div>
     </motion.footer>

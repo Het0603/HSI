@@ -1,17 +1,15 @@
 import Image from 'next/image';
 import imageCut2 from '../../public/imageCut2.svg';
-import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 
 export default function hero({ imageSrc, title, description, subHeader }) {
-     const router = useRouter();
      return (
           <section className="relative w-full">
                <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[800px] overflow-hidden">
                     <Image
                          src={imageSrc}
                          alt="Hero Image"
-                         className="absolute inset-0 w-full h-full object-cover"
+                         className="absolute inset-0 w-full h-full object-cover filter contrast-125 brightness-70"
                     />
                     <div className="absolute inset-0 bg-opacity-50 top-[10%] md:top-[15%] px-6 sm:px-10 md:px-16 lg:px-24 text-white">
                          <motion.h2
