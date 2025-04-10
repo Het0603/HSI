@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import slider1 from "../../public/slider1.png";
-import slider2 from "../../public/slider2.png";
-import slider3 from "../../public/slider3.png";
+import slider1 from "../../public/mv_project_screen.png";
+import slider2 from "../../public/pm_project_screen.png";
+import slider3 from "../../public/hc_project_screen.png";
 import slider4 from "../../public/slider4.png";
 import AppPlateform from '../../public/AppPlateform.jpeg';
 import Slider from "react-slick";
@@ -24,7 +24,7 @@ const applications = [
     - Realtime dashboard<br>
     - Project reports<br>
     - Data viewing with CSV export`,
-          imgSrc: slider2,
+          imgSrc: slider1,
           link: "/mass-vaccination",
      },
      {
@@ -38,7 +38,7 @@ const applications = [
      - Heath record database for sterilization clinic management<br>
     - Workflow optimized starting from capture, through the clinic process from initial check, to sterilization, to post op evaluation to release.<br>
     - Geofenced areas to separate teams into distinct work areas for maximized efficiency`,
-          imgSrc: slider3,
+          imgSrc: slider2,
           link: "/population-management",
      },
      {
@@ -51,7 +51,7 @@ const applications = [
     - Offline/sync mode for when offline or poor/spotty internet.<br>
     - Heath record database for sterilization clinic management<br>
     - Release Lock feature (PM Only) - animals are geotagged on capture and field teams are required to release sterilized animals within 50M of capture.`,
-          imgSrc: slider4,
+          imgSrc: slider3,
           link: "/health-clinic",
      },
      {
