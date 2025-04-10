@@ -53,7 +53,7 @@ export default function Home() {
       />
       <VideoSection />
       <BlogSection />
-      <NewsletterSection />
+      {/* <NewsletterSection /> */}
       <Footer />
     </>
   );
