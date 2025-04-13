@@ -42,9 +42,9 @@ export default function Header() {
         <Link href="/" className="flex items-center pl-5 lg:pl-0">
           <Image src={logo} width={160} height={60} alt="Logo" className="w-26 h-auto sm:w-25 md:w-38 lg:w-62" />
         </Link>
-        <div className="w-[1px] h-8 md:h-14 bg-gray-500 lg:mx-6"></div>
+        <div className="w-[1px] h-8 md:h-14 bg-gray-500 mx-2 md:mx-4 lg:mx-6"></div>
         <Link href="/" className="flex items-center">
-          <span className=" text-xs md:text-xs lg:text-xl font-bold text-[#00352C] w-[8rem] sm:w-[8rem] md:w-[8rem] lg:w-[14rem] ml-2">Humane World Apps</span>
+          <span className=" text-xs md:text-xs lg:text-xl font-bold text-[#00352C] w-[8rem] sm:w-[8rem] md:w-[8rem] lg:w-[14rem]">Humane World Apps</span>
         </Link>
 
         <ul className="hidden lg:flex items-center space-x-6 text-[#00352c] font-medium md:w-[100rem] md:justify-end pr-5">
@@ -67,11 +67,11 @@ export default function Header() {
           </li>
         </ul>
 
-        <div className="block flex items-center gap-5">
+        <div className="block flex items-center gap-2">
           <button onClick={toggleMenu} className="lg:hidden text-gray-700 focus:outline-none">
             {isOpen ? <FaTimes size={26} color="#009CEB" /> : <FaBars size={26} color="#009CEB" />}
           </button>
-          <button onClick={() => router.push('https://hsapps-rebranding.pages.dev/')} className="bg-[#E50913] hover:bg-green-800 text-white font-semibold px-6 py-5 sm:px-6 sm:py-2 md:px-7 md:py-3 text-sm sm:text-base md:text-xl sm:rounded-lg md:rounded-lg lg:rounded-lg shadow-lg">
+          <button onClick={() => router.push('https://hsapps-rebranding.pages.dev/')} className="bg-[#E50913] hover:bg-red-700 text-white font-semibold px-6 py-5 sm:px-6 sm:py-2 md:px-7 md:py-3 text-sm sm:text-base md:text-xl sm:rounded-lg md:rounded-lg lg:rounded-lg shadow-lg">
             Login
           </button>
         </div>

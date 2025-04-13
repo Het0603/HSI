@@ -23,7 +23,7 @@ export default function FirstTimeModal() {
               For every animal saved, countless others are still suffering. Your donation can create a future
               where animals no longer have to suffer cruelty and abuse.
             </p>
-            <button onClick={() => setIsOpen(false)} className="bg-red-600 text-white px-4 py-2 rounded-md font-semibold w-full">
+            <button onClick={() => setIsOpen(false)} className="bg-red-600 text-white px-4 py-2 rounded-md font-semibold w-full cursor-pointer hover:bg-red-700 transition-colors duration-200">
               Start Saving Lives
             </button>
           </div>
@@ -34,7 +34,7 @@ export default function FirstTimeModal() {
               className="w-full h-full object-cover"
             />
             <button
-              className="absolute top-2 right-2 text-white"
+              className="absolute top-2 right-2 text-white cursor-pointer hover:bg-gray-500 rounded-full px-1"
               onClick={() => setIsOpen(false)}
             >
               ✖

@@ -18,7 +18,7 @@ export default function MassVaccination() {
         imageSrc={hero2}
         title="Mass Vaccination"
         subHeader="Optimize mass vaccination efforts by leveraging technology with customized workflows."
-        description="The Mass Vaccination Program at Humane World for Animals is a pivotal initiative aimed at preventing the spread of life-threatening diseases, such as rabies, among community animals. Leveraging advanced technological tools, we empower project managers and field teams to conduct vaccination campaigns that are meticulously organized, effectively monitored, and profoundly impactful." 
+        description="Humane World's Mass Vaccination Program helps prevent deadly diseases like rabies in community animals. With advanced tools, our teams run organized, trackable, and high-impact vaccination campaigns." 
         />
       <Geofencing
         imageSrc={geofencing}
