@@ -19,7 +19,7 @@ export default function Footer() {
           transition={{ duration: 1, ease: "easeOut" }} className="flex space-x-4 flex-col items-start space-y-5">
           <div className="flex rows items-center">
             <Image src={logo} alt="Logo" style={{ width: 200, height: 100 }} />
-            <div className="w-[2px] h-15 md:h-25 bg-gray-500 mx-4"></div>
+            <div className="w-[1px] h-15 md:h-25 bg-gray-500 mx-4 lg:mx-6"></div>
             <span className=" text-xl sm:text-xl md:text-xl lg:text-2xl font-bold text-[#00352C]">Humane World Apps</span>
           </div>
           <p className="text-black sm:text-lg max-w-[26rem]">Humane World for Animals is registered as

@@ -42,7 +42,7 @@ export default function DonationSection() {
     { title: "Animals vaccinated", target: data.total_vaccinations || 0 },
     { title: "Animals sterilized", target: data.total_sterilizations || 0 },
     { title: "Field campaigns", target: data.total_areas || 0 },
-    { title: "Active partner organizations", target: data.total_organisations || 0 },
+    { title: "Active partners", target: data.total_organisations || 0 },
   ];
 
   useEffect(() => {
@@ -83,7 +83,7 @@ export default function DonationSection() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="relative z-10 flex flex-col items-start justify-center h-full text-white px-6 md:px-16 lg:px-24 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
+        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="relative z-10 flex flex-col items-start justify-center h-full text-white px-2 md:px-16 lg:px-24 gap-4 sm:gap-2 md:gap-6 lg:gap-8 mr-2">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

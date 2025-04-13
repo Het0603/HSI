@@ -42,7 +42,7 @@ export default function OurImpact() {
     { title: "Animals Vaccinated", target: 50000 },
     { title: "Animals Sterilized", target: 30000 },
     { title: "Field Campaigns", target: 800 },
-    { title: "Active Partner Organizations", target: 10 },
+    { title: "Active Partners", target: 10 },
   ];
 
   return (

@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import imageCut2 from '../../public/imageCut2.svg';
+import imageCut2 from '../../public/imageCut.svg';
 import { motion } from 'framer-motion';
 
 export default function hero({ imageSrc, title, description, subHeader }) {

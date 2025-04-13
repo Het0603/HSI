@@ -23,7 +23,7 @@ export default function surveyFeature({description}) {
                          viewport={{ once: true, amount: 0.3 }}
                          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }} className="relative text-center text-white"
                     >
-                         <h2 className="text-xl sm:text-3xl md:text-5xl font-bold">Survey Feature</h2>
+                         <h2 className="text-xl sm:text-3xl md:text-5xl font-bold mt-[-15px]">Survey Feature</h2>
                          <div className="flex justify-center">
                               <div className="mt-10 sm:text-xl md:text-2xl max-w-[60rem]" dangerouslySetInnerHTML={{ __html: description }}></div>
                          </div>
@@ -31,13 +31,13 @@ export default function surveyFeature({description}) {
                               initial={{ opacity: 0, scale: 0.9 }}
                               whileInView={{ opacity: 1, scale: 1 }}
                               viewport={{ once: true, amount: 0.3 }}
-                              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }} className="mt-10 flex justify-center"
+                              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }} className="mt-10 flex justify-center"
                          >
-                              <div className="rounded-4xl overflow-hidden relative max-h-[40rem] flex gap-10">
-                                   <Image src={dataReviewImg2} alt="Video Thumbnail" className="hidden lg:block w-full h-[80%] sm:h-[70%] md:h-[70%] lg:h-[110%] object-contain" />
-                                   <Image src={mobile1} alt="Video Thumbnail" className="hidden lg:block w-full h-[80%] sm:h-[70%] md:h-[70%] lg:h-[110%] object-contain" />
-                                   <Image src={mobile3} alt="Video Thumbnail" className="h-[80%] w-full sm:h-[70%] md:h-[70%] lg:h-[110%] object-contain" />
-                                   <Image src={mobile2} alt="Video Thumbnail" className="hidden lg:block h-[80%] sm:h-[70%] md:h-[70%] lg:h-[110%] object-contain" />
+                              <div className="overflow-hidden relative max-h-[40rem] flex gap-6">
+                                   <Image src={dataReviewImg2} alt="Video Thumbnail" className="rounded-2xl hidden lg:block w-full h-[80%] sm:h-[70%] md:h-[70%] lg:h-[101%] object-contain" />
+                                   <Image src={mobile1} alt="Video Thumbnail" className="rounded-2xl hidden lg:block w-full h-[80%] sm:h-[70%] md:h-[70%] lg:h-[100%] object-contain" />
+                                   <Image src={mobile3} alt="Video Thumbnail" className="rounded-2xl h-[80%] w-full sm:h-[70%] md:h-[70%] lg:h-[100%] object-contain" />
+                                   <Image src={mobile2} alt="Video Thumbnail" className="rounded-2xl hidden lg:block h-[80%] sm:h-[70%] md:h-[70%] lg:h-[100%] object-contain" />
                               </div>
                          </motion.div>
                     </motion.div>

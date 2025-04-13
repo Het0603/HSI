@@ -11,7 +11,7 @@ export default function dataReview({ imageSrc, title, description, multi, imageS
           >
                <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                     <motion.div
-                         className="md:w-1/2 text-center md:text-left"
+                         className="md:w-1/2 md:text-left"
                          initial={{ opacity: 0, x: -50 }}
                          whileInView={{ opacity: 1, x: 0 }}
                          transition={{ duration: 0.8, ease: "easeOut" }}>
