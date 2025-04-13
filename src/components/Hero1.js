@@ -22,9 +22,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-            className="mt-2 lg:mt-4 text-lg sm:text-xl md:text-2xl max-w-[38rem]"
+            className="mt-12 lg:mt-4 text-lg sm:text-xl md:text-2xl max-w-[38rem]"
           >
-            <span className="lg:text-4xl">Empowering animal welfare through technology-driven innovation.</span>
+            <span className="text-2xl lg:text-4xl">Empowering animal welfare through technology-driven innovation.</span>
             <br />
             <br />
             From field to clinic, our digital ecosystem drives impactful change in the lives of animals — one vaccination, one rescue, one treatment at a time.

@@ -49,7 +49,7 @@ export default function Header() {
 
         <ul className="hidden lg:flex items-center space-x-6 text-[#00352c] font-medium md:w-[100rem] md:justify-end pr-5">
           <li><Link href="/" className="hover:text-blue-500 text-xl">Home</Link></li>
-          <li><a href="https://www.humaneworld.org/en/contact-us" target="_blank" rel="noopener noreferrer" className="block hover:text-blue-500 px-5 text-xl">About us</a></li>
+          <li><a href="https://www.humaneworld.org/en/about-us" target="_blank" rel="noopener noreferrer" className="block hover:text-blue-500 px-5 text-xl">About us</a></li>
           <li><Link href="/training-resources" className="hover:text-blue-500 text-xl">Training resources</Link></li>
           <li
             className="relative group"
@@ -80,7 +80,7 @@ export default function Header() {
         <div ref={drawerRef} className={`fixed top-15 sm:top-20 right-0 w-65 sm:w-72 md:w-80 h-full bg-white z-50 shadow-lg transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
           <ul className="space-y-6 text-lg text-bold text-[#009CEB]" style={{ fontFamily: "SharpGrotesk" }}>
             <li><Link href="/" className="block hover:text-blue-500 pt-5 px-5">Home</Link><div className="border-b border-gray-300 my-2 w-full"></div></li>
-            <li><Link href="https://www.humaneworld.org/en/contact-us" target="_blank" rel="noopener noreferrer" className="block hover:text-blue-500 px-5">About us</Link><div className="border-b border-gray-300 my-2 w-full"></div></li>
+            <li><Link href="https://www.humaneworld.org/en/about-us" target="_blank" rel="noopener noreferrer" className="block hover:text-blue-500 px-5">About us</Link><div className="border-b border-gray-300 my-2 w-full"></div></li>
             <li><Link href="/training-resources" className="block hover:text-blue-500 px-5">Training resources</Link><div className="border-b border-gray-300 my-2 w-full"></div></li>
             <li>
               <button onClick={() => setDropdownOpen(!dropdownOpen)} style={{ fontFamily: "SharpGrotesk" }} className="text-bold w-full text-left flex items-center px-5 gap-1 hover:text-blue-500 justify-between">
