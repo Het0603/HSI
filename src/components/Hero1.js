@@ -22,16 +22,16 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-            className="mt-12 lg:mt-4 text-lg sm:text-xl md:text-2xl max-w-[38rem]"
+            className="mt-12 lg:mt-4 text-lg sm:text-xl md:text-2xl max-w-[40rem]"
           >
-            <span className="text-2xl lg:text-4xl">Empowering animal welfare through technology-driven innovation.</span>
+            <span className="text-3xl lg:text-6xl font-black" style={{ fontFamily: "SharpGrotesk" }}>Empowering animal welfare through technology-driven innovation.</span>
             <br />
             <br />
             From field to clinic, our digital ecosystem drives impactful change in the lives of animals — one vaccination, one rescue, one treatment at a time.
           </motion.p>
 
           <button onClick={() => router.push('https://hsapps-rebranding.pages.dev/')} style={{ fontFamily: "Noto Sans" }}
-            className="w-full sm:w-[12%] mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl font-medium text-white hover:text-[#009CEB] text-base sm:text-lg md:text-xl transition hover:bg-white border-[#009CEB] border transform duration-300 ease-in-out"
+            className="w-full sm:w-[10%] mt-6 bg-[#009CEB] px-5 sm:px-6 py-2 rounded-lg sm:rounded-xl font-extrabold text-white hover:text-[#009CEB] text-base sm:text-lg md:text-xl transition hover:bg-white border-[#009CEB] border transform duration-300 ease-in-out"
           >
             Login
           </button>
